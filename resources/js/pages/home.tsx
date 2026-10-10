@@ -47,10 +47,10 @@ export default function Home({ categories, featured, bookable, branches, testimo
                 carries the white type at AA whatever frame the film is on.
             */}
             <section className="on-dark relative isolate flex min-h-[min(88dvh,52rem)] items-end overflow-hidden bg-cocoa text-white lg:items-center">
-                <HeroVideo className="[&_video]:object-[70%_center] [&_img]:object-[70%_center]" />
+                <HeroVideo className="[&_video]:object-[80%_center] [&_img]:object-[80%_center]" />
                 <div
                     aria-hidden="true"
-                    className="absolute inset-0 -z-10 bg-[linear-gradient(to_top,rgb(42_30_28/0.82),rgb(42_30_28/0.25)_60%,rgb(42_30_28/0.1))] lg:bg-[linear-gradient(to_right,rgb(42_30_28/0.84),rgb(42_30_28/0.66)_45%,rgb(42_30_28/0.18)_68%,rgb(42_30_28/0)_82%)]"
+                    className="absolute inset-0 -z-10 bg-[linear-gradient(to_top,rgb(42_30_28/0.9),rgb(42_30_28/0.72)_55%,rgb(42_30_28/0.45))] lg:bg-[linear-gradient(to_right,rgb(42_30_28/0.84),rgb(42_30_28/0.66)_45%,rgb(42_30_28/0.18)_68%,rgb(42_30_28/0)_82%)]"
                 />
                 <div className="gutter w-full pt-24 pb-28 lg:pb-32">
                     <div className="hero-rise max-w-[46rem]">

@@ -22,7 +22,7 @@ export default function BeforeAfter({ before, after, alt }: { before?: string; a
                     style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
                 />
                 <span className="absolute top-4 left-4 rounded-full bg-cocoa/80 px-3 py-1 text-xs text-white">Before</span>
-                <span className="absolute top-4 right-4 rounded-full bg-white/90 px-3 py-1 text-xs text-cocoa">After</span>
+                <span className="absolute top-4 right-4 rounded-full bg-cocoa/80 px-3 py-1 text-xs text-white">After</span>
                 <span aria-hidden="true" className="absolute inset-y-0 w-px bg-white" style={{ left: `${position}%` }}>
                     <span className="absolute top-1/2 left-1/2 grid size-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-2 border-white bg-clay-deep text-white shadow-lift">
                         <svg viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.75">

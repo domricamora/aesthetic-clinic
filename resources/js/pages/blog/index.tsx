@@ -118,7 +118,7 @@ export default function BlogIndex({ posts, filter, categories }: Props) {
                             </Link>
                         )}
                         <div>
-                            <p className="eyebrow">
+                            <p className="text-sm text-clay-ink">
                                 {first.category}
                             </p>
                             <h2 className="mt-3 text-3xl sm:text-4xl">

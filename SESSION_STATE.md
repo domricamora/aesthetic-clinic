@@ -23,9 +23,22 @@ admin@aesthetic-clinic.test (Super Admin), owner@aesthetic-clinic.test, receptio
 - [x] Phase 3: new `site-layout.tsx` (recursive-frog showcase strip, header, footer credit), `home.tsx` on the mockup, `platform.tsx` (`/platform`, demo logins), all public page heroes light, plum fills moved to clay. Fixed chat widget root-relative fetches.
 - [x] Phase 4: admin re-themed by tokens; dashboard KPI panel `components/admin/analytics-panel.tsx` + SVG charts `components/admin/charts.tsx`; `ClinicAnalytics` gained patients, utilisation, branches, categories, practitioners, funnel, sources, monthly. Fixed previous-period bound and the refund sign bug. Platform screenshots in `public/media/photos/platform-*.jpg` (re-capture after visual changes).
 - [x] Phase 5: `ShowcaseHistorySeeder` (a year through the real actions, ~2.5 min).
-- [ ] Phase 6: login page demo logins + auth/settings polish, mobile QA, impeccable finish review + DESIGN.md, deploy.
+- [x] Phase 6: split sign-in screen with one-click demo logins (`/login?email=` prefills); QA at 390/768/1440 with no overflow or console errors; impeccable finish review run (3 rounds: 8 fixes, then hero and 3 regressions, then mobile hero contrast, measured AA at all widths); `DESIGN.md` + `.impeccable/design.json` written from the build; first live deploy done by hand (see Live below).
 
-Tests: 247 (6 new analytics tests). Last full run green before the analytics work; POS + analytics files green after.
+Tests: 247 passing (1427 assertions).
+
+## Live
+
+- https://aesthetic-clinic.recursive-frog.com, folder `~/public_html/aesthetic-clinic.recursive-frog.com` on ssh host `ck-live` (`~/.ssh/config`: ck.deskpulse.click:9022, key `~/.ssh/ck_deskpulse`). PHP `/opt/cpanel/ea-php83/root/usr/bin/php`.
+- First deploy (2026-10-10) was manual because `deploy.ps1` expects an existing site: git archive + `public/build` + a production-only `vendor/` (built with `composer install --no-dev` in a scratch dir; the host has no composer), server `.env` written in place (mode 600), `key:generate`, `migrate`, `db:seed` (about 3 minutes, log in `storage/logs/seed.log`).
+- From now on: `pwsh -File scripts/deploy.ps1 -IdentityFile ~/.ssh/ck_deskpulse`. It does not upload `vendor/`: after changing composer dependencies, rebuild the production vendor and upload it by hand the same way.
+- Re-seeding live wipes it: only with `php artisan migrate:fresh --seed --force` on purpose.
+
+## Open items
+
+- Hero film is the best free Pexels clinic footage with Asian patients that could be found; a commissioned shoot would be warmer still.
+- About 40 components still use the legacy token aliases (ivory, rose, plum); they map to the new values. Rename as they are touched (DESIGN.md rule "Honest Names").
+- PHPStan still has the pre-existing errors from the parent codebase.
 
 ## Commands
 

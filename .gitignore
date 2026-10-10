@@ -49,3 +49,6 @@ yarn-error.log
 /public/media/photos/staff
 /public/media/photos/products
 /public/media/photos/treatments
+
+# Impeccable review captures are evidence for a review round, not source.
+/.impeccable/review

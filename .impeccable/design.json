@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T12:00:00Z",
+  "title": "Design System: Patrice Beauty Lounge Aesthetics",
+  "extensions": {
+    "colorMeta": {
+      "canvas": { "role": "neutral", "displayName": "Rose Canvas", "canonical": "#FBF6F3", "tonalRamp": ["#2A1E1C", "#3B2A28", "#5C4844", "#8E4E3F", "#A4604F", "#C4877A", "#F2E3DD", "#FBF6F3"] },
+      "soft-rose": { "role": "neutral", "displayName": "Soft Rose", "canonical": "#F8EEEA", "tonalRamp": ["#2A1E1C", "#3B2A28", "#5C4844", "#8E4E3F", "#A4604F", "#C4877A", "#F2E3DD", "#F8EEEA"] },
+      "blush": { "role": "neutral", "displayName": "Blush", "canonical": "#F2E3DD", "tonalRamp": ["#2A1E1C", "#3B2A28", "#5C4844", "#8E4E3F", "#A4604F", "#C4877A", "#E6C2B3", "#F2E3DD"] },
+      "clay": { "role": "primary", "displayName": "Rose Clay", "canonical": "#C4877A", "tonalRamp": ["#351D18", "#5C3229", "#83473A", "#AA5C4B", "#BF7C6E", "#D09F95", "#E3C6BF", "#F7EFED"] },
+      "clay-deep": { "role": "primary", "displayName": "Rose Clay Deep", "canonical": "#A4604F", "tonalRamp": ["#341E19", "#59342B", "#7F4B3D", "#A56150", "#BB8172", "#CDA298", "#E1C7C1", "#F7F0EE"] },
+      "clay-ink": { "role": "primary", "displayName": "Clay Ink", "canonical": "#8E4E3F", "tonalRamp": ["#351D18", "#5C3229", "#83483A", "#AA5D4B", "#BF7D6E", "#D0A095", "#E3C6BF", "#F7EFED"] },
+      "champagne": { "role": "secondary", "displayName": "Champagne", "canonical": "#E6C2B3", "tonalRamp": ["#351D18", "#5C3229", "#83483A", "#AA5D4B", "#C58367", "#D5A490", "#E6C2B3", "#F8F0ED"] },
+      "cocoa": { "role": "neutral", "displayName": "Cocoa", "canonical": "#3B2A28", "tonalRamp": ["#2E201F", "#4F3836", "#70504C", "#926863", "#AB8782", "#C1A7A4", "#DACAC8", "#F5F0F0"] },
+      "cocoa-deep": { "role": "neutral", "displayName": "Cocoa Deep", "canonical": "#2A1E1C", "tonalRamp": ["#2A1E1C", "#503935", "#71514B", "#936962", "#AB8882", "#C2A8A3", "#DACBC8", "#F5F0F0"] },
+      "text": { "role": "neutral", "displayName": "Warm Text", "canonical": "#5C4844", "tonalRamp": ["#2C2221", "#4C3C38", "#6D5550", "#8D6E68", "#A68C87", "#BEABA7", "#D8CDCA", "#F4F1F0"] },
+      "muted-text": { "role": "neutral", "displayName": "Muted Text", "canonical": "#7A6460" },
+      "hairline": { "role": "neutral", "displayName": "Hairline", "canonical": "#ECDCD5" },
+      "input-stroke": { "role": "neutral", "displayName": "Input Stroke", "canonical": "#E2CDC5" },
+      "card-white": { "role": "neutral", "displayName": "Card White", "canonical": "#FFFFFF" },
+      "destructive": { "role": "error", "displayName": "Destructive", "canonical": "#B42318" },
+      "chart-1": { "role": "data", "displayName": "Series 1 Terracotta", "canonical": "#B4553F" },
+      "chart-2": { "role": "data", "displayName": "Series 2 Teal", "canonical": "#008F9E" },
+      "chart-3": { "role": "data", "displayName": "Series 3 Ochre", "canonical": "#B8860B" },
+      "chart-4": { "role": "data", "displayName": "Series 4 Violet", "canonical": "#7B5BA6" },
+      "chart-5": { "role": "data", "displayName": "Series 5 Green", "canonical": "#4F8F3A" },
+      "chart-1-dark": { "role": "data", "displayName": "Series 1 Terracotta (dark)", "canonical": "#C96A52" },
+      "chart-2-dark": { "role": "data", "displayName": "Series 2 Teal (dark)", "canonical": "#14949F" },
+      "chart-3-dark": { "role": "data", "displayName": "Series 3 Ochre (dark)", "canonical": "#B98A20" },
+      "chart-4-dark": { "role": "data", "displayName": "Series 4 Violet (dark)", "canonical": "#8E6EC0" },
+      "chart-5-dark": { "role": "data", "displayName": "Series 5 Green (dark)", "canonical": "#5E9848" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only; 2.75rem on phones to 4.25rem on desktop." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings, sentence case, 2.25rem to 3rem." },
+      "title": { "displayName": "Title", "purpose": "Card and category names, mobile menu items, footer column heads." },
+      "figure": { "displayName": "Figure", "purpose": "Prices and admin KPI values, tabular lining numerals." },
+      "body": { "displayName": "Body", "purpose": "All running copy in Geist." },
+      "body-lead": { "displayName": "Body Lead", "purpose": "Lead paragraphs under section headings and in the hero." },
+      "label": { "displayName": "Label", "purpose": "Form labels, buttons, small list headings." }
+    },
+    "shadows": [
+      { "name": "shadow-soft", "value": "0 1px 2px rgb(59 42 40 / 0.04), 0 8px 24px -12px rgb(59 42 40 / 0.14)", "purpose": "Resting cards, admin panels, tooltips." },
+      { "name": "shadow-lift", "value": "0 2px 4px rgb(59 42 40 / 0.04), 0 24px 48px -20px rgb(59 42 40 / 0.28)", "purpose": "Featured card, appointment card, overlapping photographs, toasts, hover state." },
+      { "name": "action-glow", "value": "0 6px 16px -8px rgb(164 96 79 / 0.7)", "purpose": "Under the filled clay button only." }
+    ],
+    "motion": [
+      { "name": "ease-out-soft", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Every authored movement: hero rise, reveals, hover lift, press." },
+      { "name": "hero-rise", "value": "translateY(12px) to none, opacity 0 to 1, 280ms ease-out-soft, 120ms + i * 60ms delay", "purpose": "The one authored moment: hero lines settle in on load. Reduced motion keeps the fade only." },
+      { "name": "reveal", "value": "translateY(12px), 280ms ease-out-soft, i * 60ms stagger", "purpose": "Section headings and cards settle as they enter; content is visible without JS; off under reduced motion." },
+      { "name": "hover-lift", "value": "translateY(-4px) + shadow-lift, 220ms", "purpose": "Cards on hover, only under (hover: hover) and (pointer: fine)." },
+      { "name": "press", "value": "scale(0.97), 160ms ease-out-soft", "purpose": "Active feedback on buttons and pressable links." },
+      { "name": "state-change", "value": "180ms ease-out", "purpose": "Colour, border and background transitions." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The filled clay action: Book now, Book a consultation, Send enquiry.",
+      "html": "<button class=\"ds-btn-solid\">Book a consultation</button>",
+      "css": ".ds-btn-solid { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.6rem; border: none; border-radius: 8px; background: #A4604F; color: #fff; font-family: Geist, ui-sans-serif, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 500; line-height: 1.25rem; cursor: pointer; box-shadow: 0 6px 16px -8px rgb(164 96 79 / 0.7); transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms ease-out; } .ds-btn-solid:hover { background: #8E4E3F; } .ds-btn-solid:focus-visible { outline: 2px solid #C4877A; outline-offset: 3px; } .ds-btn-solid:active { transform: scale(0.97); }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "The secondary action beside a filled button.",
+      "html": "<button class=\"ds-btn-outline\">View treatments</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.6rem; border: 1px solid #C4877A; border-radius: 8px; background: rgb(255 255 255 / 0.4); color: #8E4E3F; font-family: Geist, ui-sans-serif, system-ui, sans-serif; font-size: 0.9375rem; font-weight: 500; line-height: 1.25rem; cursor: pointer; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms ease-out, border-color 180ms ease-out; } .ds-btn-outline:hover { border-color: #A4604F; background: #fff; } .ds-btn-outline:focus-visible { outline: 2px solid #C4877A; outline-offset: 3px; } .ds-btn-outline:active { transform: scale(0.97); }"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "The small soft-rose Book link on each treatment card.",
+      "html": "<button class=\"ds-btn-quiet\">Book</button>",
+      "css": ".ds-btn-quiet { padding: 0.5rem 1rem; border: none; border-radius: 8px; background: #F8EEEA; color: #3B2A28; font-family: Geist, ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), background-color 180ms ease-out; } .ds-btn-quiet:hover { background: #F2E3DD; } .ds-btn-quiet:focus-visible { outline: 2px solid #C4877A; outline-offset: 3px; } .ds-btn-quiet:active { transform: scale(0.97); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "48px white field with a warm stroke; label above.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Mobile number</span><input class=\"ds-input\" placeholder=\"0917 123 4567\" /></label>",
+      "css": ".ds-field { display: block; font-family: Geist, ui-sans-serif, system-ui, sans-serif; } .ds-field-label { font-size: 0.875rem; font-weight: 500; color: #3B2A28; } .ds-input { display: block; margin-top: 0.375rem; height: 48px; width: 100%; padding: 0 1rem; border: 1px solid #E2CDC5; border-radius: 8px; background: #fff; color: #3B2A28; font: inherit; font-size: 0.9375rem; transition: border-color 180ms ease-out; } .ds-input::placeholder { color: #7A6460; } .ds-input:focus { border-color: #C4877A; outline: none; } .ds-input:focus-visible { outline: 2px solid #C4877A; outline-offset: 3px; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "description": "Centred Geist links; a clay underline scales in on hover and holds on the active page.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link is-active\" href=\"#\">Treatments</a><a class=\"ds-nav-link\" href=\"#\">About</a><a class=\"ds-nav-link\" href=\"#\">Results</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 0.25rem; padding: 1rem; background: rgb(251 246 243 / 0.9); border-bottom: 1px solid #ECDCD5; font-family: Geist, ui-sans-serif, system-ui, sans-serif; } .ds-nav-link { position: relative; padding: 0.5rem 0.875rem; border-radius: 8px; font-size: 0.9375rem; color: rgb(59 42 40 / 0.75); text-decoration: none; transition: color 150ms ease-out; } .ds-nav-link::after { content: ''; position: absolute; left: 0.875rem; right: 0.875rem; bottom: -2px; height: 1px; background: #C4877A; transform: scaleX(0); transform-origin: left; transition: transform 200ms ease-out; } .ds-nav-link:hover, .ds-nav-link.is-active { color: #3B2A28; } .ds-nav-link:hover::after, .ds-nav-link.is-active::after { transform: scaleX(1); } .ds-nav-link:focus-visible { outline: 2px solid #C4877A; outline-offset: 3px; }"
+    },
+    {
+      "name": "Signature Card",
+      "kind": "card",
+      "refersTo": "soft-card",
+      "description": "White soft card with hairline and cocoa-tinted shadow; lifts on hover for fine pointers.",
+      "html": "<a class=\"ds-card\" href=\"#\"><h3 class=\"ds-card-title\">Skin Booster</h3><span class=\"ds-card-cat\">Injectables</span><p class=\"ds-card-body\">Deep hydration for brighter, smoother skin.</p><p class=\"ds-card-price\"><span>from</span> PHP 8,500</p></a>",
+      "css": ".ds-card { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 22rem; padding: 2.25rem 1.75rem 2rem; background: #fff; border: 1px solid rgb(236 220 213 / 0.8); border-radius: 10px; box-shadow: 0 1px 2px rgb(59 42 40 / 0.04), 0 8px 24px -12px rgb(59 42 40 / 0.14); text-decoration: none; transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 220ms ease-out; } @media (hover: hover) and (pointer: fine) { .ds-card:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgb(59 42 40 / 0.04), 0 24px 48px -20px rgb(59 42 40 / 0.28); } } .ds-card:focus-visible { outline: 2px solid #C4877A; outline-offset: 3px; } .ds-card-title { margin: 0; font-family: 'Gilda Display', Didot, Georgia, serif; font-weight: 400; font-size: 1.75rem; line-height: 1.25; text-transform: uppercase; color: #3B2A28; } .ds-card-cat { margin-top: 0.375rem; font-family: Geist, ui-sans-serif, sans-serif; font-size: 0.9375rem; color: #8E4E3F; } .ds-card-body { margin-top: 1.5rem; font-family: Geist, ui-sans-serif, sans-serif; font-size: 0.9375rem; color: #5C4844; } .ds-card-price { margin-top: 1.25rem; font-family: 'Gilda Display', Georgia, serif; font-size: 1.75rem; color: #3B2A28; font-variant-numeric: tabular-nums lining-nums; } .ds-card-price span { margin-right: 0.375rem; font-family: Geist, sans-serif; font-size: 0.875rem; color: #7A6460; }"
+    },
+    {
+      "name": "KPI Tile",
+      "kind": "custom",
+      "description": "Admin figure tile: Gilda numeral, Geist label, soft card.",
+      "html": "<div class=\"ds-kpi\"><p class=\"ds-kpi-label\">Revenue, last 30 days</p><p class=\"ds-kpi-value\">PHP 1.24M</p></div>",
+      "css": ".ds-kpi { padding: 1.25rem; background: #fff; border: 1px solid #ECDCD5; border-radius: 10px; box-shadow: 0 1px 2px rgb(59 42 40 / 0.04), 0 8px 24px -12px rgb(59 42 40 / 0.14); max-width: 16rem; } .ds-kpi-label { margin: 0; font-family: Geist, ui-sans-serif, sans-serif; font-size: 0.875rem; color: #7A6460; } .ds-kpi-value { margin: 0.375rem 0 0; font-family: 'Gilda Display', Georgia, serif; font-size: 2rem; line-height: 1; letter-spacing: -0.01em; color: #3B2A28; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Avatar",
+      "kind": "custom",
+      "refersTo": "avatar",
+      "description": "Round initial well on review cards; the only fully round container besides thumbnails.",
+      "html": "<span class=\"ds-avatar\">M</span>",
+      "css": ".ds-avatar { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 9999px; background: #F8EEEA; color: #8E4E3F; font-family: 'Gilda Display', Georgia, serif; font-size: 1.125rem; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Warm Treatment Room",
+    "overview": "The clinic should feel like a calm, warm room you can step into: rose-tinted light, blush walls, a classical serif on the door, white cards set down softly on a counter. Every surface is warm; nothing is grey, nothing is black. The palette steps from a pale rose canvas through blush fields to a rose clay for action and a deep cocoa for ink, so the whole product reads as one material.\n\nDensity is relaxed on the public site (generous bands, one idea per band) and working-dense in the admin, where the same palette and corners carry tables, charts and figures. The serif is the signature; the sans does the work. Full-width colour bands alternate canvas, blush and soft rose, with content held to one measure inside them.\n\nThe system refuses the category default: a centred stock hero over three icon cards and a pastel gradient. Depth is soft and warm (cocoa-tinted long shadows), motion is a quiet settle, never a show.",
+    "keyCharacteristics": [
+      "Rose-tinted canvas, blush and soft-rose bands, edge to edge; content in an 82rem measure.",
+      "Gilda Display at one weight for headings and figures; Geist for everything read.",
+      "Soft 10px corner family on cards, media, controls; avatars round.",
+      "White cards with hairlines and cocoa-tinted long shadows.",
+      "One authored motion (the hero rise); everything else is a short ease-out state change."
+    ],
+    "rules": [
+      { "name": "The Clay Never Reads Rule", "body": "Rose Clay is a fill and a stroke, never text or a text background. Text on clay surfaces uses Clay Deep; links use Clay Ink.", "section": "colors" },
+      { "name": "The Champagne On Cocoa Rule", "body": "Champagne appears only on cocoa fields. On light surfaces it vanishes; use clay instead.", "section": "colors" },
+      { "name": "The Honest Names Rule", "body": "New call sites use canvas, clay, clay-deep, clay-ink, cocoa, cocoa-deep. The legacy aliases (ivory, rose, rose-deep, rose-ink, plum, plum-deep, violet, gold, gold-deep, lilac, mist, ink) map to these values so older components re-theme, and must not gain new call sites.", "section": "colors" },
+      { "name": "The One Weight Rule", "body": "Gilda has one weight and no italic. Hierarchy comes from size and colour, never bold. An emphasised word in a heading is set upright in Clay Ink.", "section": "typography" },
+      { "name": "The Sans In The Columns Rule", "body": "In the admin shell, h3 and h4 switch to Geist; the serif stays for page titles and headline figures.", "section": "typography" },
+      { "name": "The No Kicker Rule", "body": "No eyebrow labels above headings. A heading stands on its own.", "section": "typography" },
+      { "name": "The Warm Shadow Rule", "body": "No neutral-grey or black shadows on light surfaces. Depth is cocoa or clay tinted.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do run every section background edge to edge and hold content in the gutter (82rem measure).",
+      "Do use Clay Deep for filled actions and Clay Ink for links; keep Rose Clay for fills, rules and focus.",
+      "Do set headings and figures in Gilda Display at its one weight; use size and colour for hierarchy.",
+      "Do tint every shadow to cocoa (Soft at rest, Lift for featured and hover).",
+      "Do keep corners in the 10px family; avatars and thumbnails round.",
+      "Do keep motion to one authored hero rise (12px, 60ms stagger, 280ms cubic-bezier(0.23, 1, 0.32, 1)); scroll reveals use the same values. Under reduced motion keep the fades, drop the movement.",
+      "Do gate hover lifts behind hover-capable fine pointers; press feedback is scale(0.97).",
+      "Do read chart colours only from the --chart-* tokens."
+    ],
+    "donts": [
+      "Don't put eyebrow labels or kickers above headings.",
+      "Don't use em dashes in UI copy.",
+      "Don't bold or italicise Gilda Display.",
+      "Don't use Champagne on light surfaces, or Rose Clay as a text colour.",
+      "Don't add new call sites for the legacy aliases (ivory, rose, plum, gold, ink and the rest); use the honest names.",
+      "Don't use grey or black shadows on light surfaces, or hard offset shadows.",
+      "Don't box the page in a centred container with side margins of bare canvas.",
+      "Don't rebuild the category default: a centred stock hero over three icon cards on a pastel gradient."
+    ]
+  }
+}

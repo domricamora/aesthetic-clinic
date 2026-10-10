@@ -31,7 +31,7 @@ export default function BlogShow({ post, related }: Props) {
 
             <article>
                 <header className="gutter bg-blush pt-16 pb-12 text-cocoa lg:pt-24">
-                    <p className="eyebrow">
+                    <p className="text-sm text-clay-ink">
                         {post.category}
                     </p>
                     <h1 className="mt-4 max-w-4xl text-4xl leading-[1.1] sm:text-6xl">

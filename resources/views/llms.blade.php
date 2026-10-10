@@ -1,6 +1,6 @@
-# Aesthetic Clinic SaaS Platform
+# Aesthetic Clinic SaaS Platform Demo
 
-> A live showcase of clinic management software for aesthetic clinics in the Philippines and Southeast Asia, built by recursive-frog.com.
+> This is the demo site for the Aesthetic Clinic SaaS Platform, clinic management software for aesthetic clinics in the Philippines and Southeast Asia, built by recursive-frog.com.
 
 ## Product
 

@@ -2,12 +2,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => ($appearance ?? 'system') == 'dark'])>
     @php
         $isPlatformPage = request()->routeIs('platform');
-        $seoTitle = $isPlatformPage
-            ? config('clinic.name').' SaaS Platform | recursive-frog.com'
-            : config('clinic.name').' | Aesthetic clinic management platform demo';
+        $seoTitle = config('clinic.name').' SaaS Platform Demo | recursive-frog.com';
         $seoDescription = $isPlatformPage
-            ? 'One operating system for aesthetic clinics: website and booking, CRM, chat, point of sale, inventory, accounting, HR and payroll. Designed and built by recursive-frog.com.'
-            : 'Explore a live demo of aesthetic clinic management software for the Philippines: online booking, CRM, point of sale, inventory, accounting, HR and payroll. Built by recursive-frog.com.';
+            ? 'Explore the Aesthetic Clinic SaaS Platform demo by recursive-frog.com: website and booking, CRM, chat, point of sale, inventory, accounting, HR and payroll for aesthetic clinics.'
+            : 'This is the demo site for the Aesthetic Clinic SaaS Platform by recursive-frog.com. Explore website and booking, CRM, point of sale, inventory, accounting, HR and payroll for aesthetic clinics.';
         $seoSchema = [
             '@context' => 'https://schema.org',
             '@graph' => [
@@ -21,8 +19,8 @@
                     '@type' => 'WebSite',
                     '@id' => route('home').'#website',
                     'url' => route('home'),
-                    'name' => config('clinic.name').' SaaS Platform showcase',
-                    'description' => 'A live showcase of aesthetic clinic management software by recursive-frog.com.',
+                    'name' => config('clinic.name').' SaaS Platform demo site',
+                    'description' => 'The demo site for aesthetic clinic management software built by recursive-frog.com.',
                     'publisher' => ['@id' => 'https://recursive-frog.com/#organization'],
                     'inLanguage' => 'en-PH',
                 ],
@@ -60,7 +58,7 @@
         <meta name="description" content="{{ $seoDescription }}">
         <link rel="canonical" href="{{ url()->current() }}">
         <meta property="og:type" content="website">
-        <meta property="og:site_name" content="{{ config('clinic.name') }} SaaS Platform">
+        <meta property="og:site_name" content="{{ config('clinic.name') }} SaaS Platform Demo">
         <meta property="og:title" content="{{ $seoTitle }}">
         <meta property="og:description" content="{{ $seoDescription }}">
         <meta property="og:url" content="{{ url()->current() }}">
@@ -68,7 +66,7 @@
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
-        <meta property="og:image:alt" content="Aesthetic Clinic SaaS Platform, one system for the whole clinic, built by recursive-frog.com">
+        <meta property="og:image:alt" content="Demo site for the Aesthetic Clinic SaaS Platform: one system for the whole clinic, built by recursive-frog.com">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="{{ $seoTitle }}">
         <meta name="twitter:description" content="{{ $seoDescription }}">

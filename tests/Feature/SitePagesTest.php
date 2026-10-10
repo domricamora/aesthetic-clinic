@@ -95,6 +95,7 @@ it('publishes social metadata and software facts for search and AI crawlers', fu
         ->assertSee('name="description"', false)
         ->assertSee('property="og:title"', false)
         ->assertSee('property="og:description"', false)
+        ->assertSee('Aesthetic Clinic SaaS Platform Demo', false)
         ->assertSee('property="og:image" content="'.asset('media/brand/og-image.png').'"', false)
         ->assertSee('property="og:image:width" content="1200"', false)
         ->assertSee('name="twitter:card" content="summary_large_image"', false)
@@ -103,8 +104,9 @@ it('publishes social metadata and software facts for search and AI crawlers', fu
 
     $this->get('/llms.txt')->assertOk()
         ->assertHeader('Content-Type', 'text/plain; charset=UTF-8')
-        ->assertSee('# Aesthetic Clinic SaaS Platform', false)
+        ->assertSee('# Aesthetic Clinic SaaS Platform Demo', false)
         ->assertSee(route('platform'), false)
+        ->assertSee('This is the demo site for the Aesthetic Clinic SaaS Platform', false)
         ->assertSee('fictional showcase tenant', false)
         ->assertSee('recursive-frog.com', false);
 });

@@ -63,6 +63,12 @@ function Delta({ now, before, points = false, invert = false }: { now: number | 
     }
 
     const diff = points ? (now - before) * 100 : ((now - before) / Math.abs(before)) * 100;
+
+    // A change that rounds to nothing is no change; "-0%" with a down arrow says otherwise.
+    if (Math.abs(diff) < (points ? 0.05 : 0.5)) {
+        return <span className="text-xs text-muted-foreground">Level with the previous period</span>;
+    }
+
     const up = diff >= 0;
     const good = invert ? !up : up;
     const Icon = up ? ArrowUpRight : ArrowDownRight;

@@ -1,0 +1,465 @@
+@import 'tailwindcss';
+
+@import 'tw-animate-css';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --font-sans:
+        'Jost', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-display: 'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+
+    /*
+     * The script face, for the clinic's own name and nowhere else.
+     *
+     * It is a display face: it is used at one size, in one place, and always
+     * above a tracked sans line. It is never set as a body font, because a
+     * script at 14px is a legibility problem and a script in a paragraph is
+     * worse. Adding a face to a palette is how a brand quietly accumulates
+     * six typefaces, so this one has a job and a boundary.
+     *
+     * The fallbacks matter more than usual: Pinyon has no italic, and on a
+     * machine without the webfont these are the faces a script should degrade
+     * to rather than a generic sans.
+     */
+    --font-script:
+        'Pinyon Script', 'Snell Roundhand', 'Apple Chancery', 'Brush Script MT',
+        cursive;
+
+    /* Square corners everywhere (owner rule); avatars use rounded-full. */
+    --radius-lg: var(--radius);
+    --radius-md: var(--radius);
+    --radius-sm: var(--radius);
+
+    /*
+     * The brand palette.
+     *
+     * These eight are the owner's colours and are used verbatim:
+     *
+     *   ivory -> soft-rose -> blush -> rose (brand) -> deep-rose -> plum (dark)
+     *   (page)  (tint)      (wash)   (fill)        (emphasis)   (anchor)
+     *
+     * `champagne` is the metallic accent the buttons and rules are painted in.
+     *
+     * `plum` is the dark field the light pinks sit on. Signature rose #F47FA4
+     * carries white text at only 2.5:1, so it is a fill and a border, never a
+     * background for text. Every "dark" surface in the design is plum, which
+     * takes white at 14.2:1.
+     *
+     * Contrast, checked against ivory:
+     *   plum       #3B2430  14.2:1   dark surfaces, text on champagne
+     *   text       #51454A   9.1:1   body copy
+     *   rose-ink   #A83257   5.1:1   links and small emphasis
+     *   deep-rose  #D9577F   3.7:1   fills, rules, large text only
+     *   rose       #F47FA4   2.5:1   decorative fills and borders only
+     *
+     * `rose-ink` is derived, not supplied. Deep rose fails AA as link text at
+     * 3.7:1, so the one shade between the brand rose and plum is kept for text
+     * that has to carry meaning. Never add a new link colour; use this one.
+     */
+    --color-ivory: #fffdfc;
+    --color-soft-rose: #fff4f7;
+    --color-blush: #fce8ee;
+    --color-rose: #f47fa4;
+    --color-rose-deep: #d9577f;
+    --color-rose-ink: #a83257;
+    --color-champagne: #c9a46c;
+    --color-plum: #3b2430;
+    --color-plum-deep: #2a1a23;
+    --color-text: #51454a;
+
+    /*
+     * Legacy aliases. The old brand was plum, violet and gold and those names
+     * are spread across 62 components, most of them doing the same job in a
+     * different colour. Aliasing them means the whole product rebrands from
+     * this one block, and each call site can be renamed to something honest as
+     * it is next touched. Do not add a new call site using a legacy name.
+     */
+    --color-violet: var(--color-rose-ink);
+    --color-gold: var(--color-champagne);
+    --color-gold-deep: #a83257;
+    --color-lilac: var(--color-blush);
+    --color-mist: var(--color-soft-rose);
+    --color-ink: var(--color-plum);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/*
+ * The marketing site gets the display serif; it is a brand choice and it
+ * belongs there. The backend is a different job: staff read it all day,
+ * scanning figures down a column, and on a screen of numbers a high-contrast
+ * serif is decoration that costs legibility. So the whole backend re-points
+ * the display token at the sans stack.
+ *
+ * Re-pointing the token rather than editing every screen means a page added
+ * next month is legible without anyone having to remember.
+ */
+[data-shell='admin'] {
+    --font-display: var(--font-sans);
+}
+
+:root,
+.theme-light {
+    --background: #fffdfc;
+    --foreground: #51454a;
+    --card: #fffdfc;
+    --card-foreground: #51454a;
+    --popover: #fffdfc;
+    --popover-foreground: #51454a;
+    --primary: #a83257;
+    --primary-foreground: #ffffff;
+    --secondary: #fce8ee;
+    --secondary-foreground: #3b2430;
+    --muted: #fff4f7;
+    --muted-foreground: #6b5b61;
+    --accent: #f47fa4;
+    --accent-foreground: #3b2430;
+    --destructive: #b42318;
+    --destructive-foreground: #ffffff;
+    --border: #f2dce5;
+    --input: #ebc9d6;
+    --ring: #d9577f;
+    --chart-1: #d9577f;
+    --chart-2: #f47fa4;
+    --chart-3: #a83257;
+    --chart-4: #c9a46c;
+    --chart-5: #6b5b61;
+    --radius: 0;
+    --sidebar: #3b2430;
+    --sidebar-foreground: #fce8ee;
+    --sidebar-primary: #c9a46c;
+    --sidebar-primary-foreground: #3b2430;
+    --sidebar-accent: #4a3039;
+    --sidebar-accent-foreground: #fffdfc;
+    --sidebar-border: #5b3a45;
+    --sidebar-ring: #c9a46c;
+}
+
+.dark {
+    --background: #2a1a23;
+    --foreground: #fff4f7;
+    --card: #3b2430;
+    --card-foreground: #fff4f7;
+    --popover: #3b2430;
+    --popover-foreground: #fff4f7;
+    --primary: #f47fa4;
+    --primary-foreground: #2a1a23;
+    --secondary: #4a3039;
+    --secondary-foreground: #fff4f7;
+    --muted: #3b2430;
+    --muted-foreground: #e8c9d3;
+    --accent: #4a3039;
+    --accent-foreground: #fff4f7;
+    --destructive: #f04438;
+    --destructive-foreground: #2a1a23;
+    --border: #5b3a45;
+    --input: #6b4550;
+    --ring: #f47fa4;
+    --chart-1: #f47fa4;
+    --chart-2: #d9577f;
+    --chart-3: #c9a46c;
+    --chart-4: #fce8ee;
+    --chart-5: #e8c9d3;
+    --sidebar: #241419;
+    --sidebar-foreground: #fce8ee;
+    --sidebar-primary: #c9a46c;
+    --sidebar-primary-foreground: #2a1a23;
+    --sidebar-accent: #3b2430;
+    --sidebar-accent-foreground: #fff4f7;
+    --sidebar-border: #5b3a45;
+    --sidebar-ring: #c9a46c;
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    h1,
+    h2,
+    h3 {
+        @apply font-display tracking-tight;
+    }
+}
+
+/* Public site: theme the parts the browser draws. */
+.site ::selection {
+    background: var(--color-champagne);
+    color: var(--color-plum-deep);
+}
+
+/*
+ * The content gutter every section sits in.
+ *
+ * The sections used to carry `px-4 sm:px-8 lg:px-12`, which pins the padding
+ * at 48px and lets the content run the whole width of the window. On a 27-inch
+ * display that is a 1900px line of body copy, which nobody can read across.
+ *
+ * Past the lg breakpoint the padding stops being a fixed number and starts
+ * being half the leftover space, so the content is held at the same 80rem
+ * measure the header, footer and page heroes already use while the section's
+ * own background still runs edge to edge. Below lg it is exactly the padding
+ * it replaced, so nothing moves on a phone or a small laptop.
+ */
+.gutter {
+    padding-inline: 1rem;
+}
+
+@media (min-width: 40rem) {
+    .gutter {
+        padding-inline: 2rem;
+    }
+}
+
+@media (min-width: 64rem) {
+    .gutter {
+        padding-inline: max(3rem, calc((100% - 80rem) / 2));
+    }
+}
+
+.site {
+    scrollbar-color: var(--color-rose-deep) var(--color-blush);
+    accent-color: var(--color-rose-deep);
+}
+
+.site :focus-visible {
+    outline: 2px solid var(--color-rose-deep);
+    outline-offset: 3px;
+}
+
+.site .on-dark :focus-visible {
+    outline-color: var(--color-champagne);
+}
+
+/* Appointment card stock: ivory face with a debossed hairline edge. */
+.card-stock {
+    background: #fffdfc;
+    box-shadow:
+        inset 0 0 0 1px rgb(81 69 74 / 0.08),
+        inset 0 0 0 6px #fffdfc,
+        inset 0 0 0 7px rgb(81 69 74 / 0.06),
+        0 24px 48px -24px rgb(42 26 35 / 0.45);
+}
+
+.numerals {
+    font-variant-numeric: tabular-nums lining-nums;
+}
+
+/*
+ * Editorial primitives.
+ *
+ * The marketing pages repeat the same three shapes over and over: a small
+ * tracked label above a heading, a hairline that fades to nothing, and a solid
+ * action. Writing them once is what stops twelve sections from each inventing
+ * their own version of "eyebrow".
+ */
+
+/* Small tracked label that sits above a section heading. */
+.eyebrow {
+    font-size: 0.6875rem;
+    line-height: 1;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-rose-ink);
+}
+
+.on-dark .eyebrow,
+.eyebrow.on-dark {
+    color: var(--color-champagne);
+}
+
+/* Hairline that fades out to the right, for separating bands. */
+.rule-fade {
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        var(--color-rose-deep),
+        var(--color-blush) 45%,
+        transparent
+    );
+}
+
+/*
+ * The action button. `rose-deep` is the darkest pink that still clears AA
+ * against white text, so a filled button is that and never `rose` itself.
+ *
+ * In `@layer components` so that a Tailwind utility on the same element can
+ * still win. Unlayered CSS beats layered CSS whatever its specificity, so
+ * with these rules unlayered the `display: inline-flex` here silently beat
+ * `.hidden` -- and `className="btn btn-solid hidden sm:inline-flex"` kept the
+ * booking button on screen at every width, on top of the "Book now" bar that
+ * is meant to be the mobile call to action. Tailwind orders its layers
+ * theme, base, components, utilities, so utilities come last and win.
+ */
+@layer components {
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.75rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.25rem;
+        text-align: center;
+        transition:
+            transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+            background-color 160ms ease-out,
+            color 160ms ease-out,
+            border-color 160ms ease-out;
+    }
+
+    .btn:active {
+        transform: scale(0.97);
+    }
+
+    .btn-solid {
+        background: var(--color-rose-deep);
+        color: #fff;
+    }
+
+    .btn-solid:hover {
+        background: var(--color-rose-ink);
+    }
+
+    /* On a plum field the filled action is champagne, with dark text. */
+    .on-dark .btn-solid {
+        background: var(--color-champagne);
+        color: var(--color-plum-deep);
+    }
+
+    .on-dark .btn-solid:hover {
+        background: #fff;
+    }
+
+    .btn-outline {
+        border: 1px solid var(--color-rose-deep);
+        color: var(--color-rose-ink);
+    }
+
+    .btn-outline:hover {
+        background: var(--color-rose-deep);
+        color: #fff;
+    }
+
+    .on-dark .btn-outline {
+        border-color: rgb(255 255 255 / 0.35);
+        color: #fff;
+    }
+
+    .on-dark .btn-outline:hover {
+        border-color: var(--color-champagne);
+        background: var(--color-champagne);
+        color: var(--color-plum-deep);
+    }
+}
+
+/* A figure that leads a stat row, with the brand rule above it. */
+.figure-rule {
+    position: relative;
+}
+
+.figure-rule::before {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        var(--color-rose-deep),
+        var(--color-champagne)
+    );
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .figure-rule::before {
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 260ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .figure-rule:hover::before,
+    .figure-rule:focus-visible::before {
+        transform: scaleX(1);
+    }
+}
+
+/* One reveal grammar for the whole site: content is visible by default,
+   JS adds .reveal-ready, and elements settle up as they enter. */
+@media (prefers-reduced-motion: no-preference) {
+    .reveal-ready [data-reveal] {
+        opacity: 0;
+        transform: translateY(14px);
+        transition:
+            opacity 260ms cubic-bezier(0.23, 1, 0.32, 1),
+            transform 260ms cubic-bezier(0.23, 1, 0.32, 1);
+        transition-delay: calc(var(--i, 0) * 50ms);
+    }
+
+    .reveal-ready [data-reveal].is-in {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.press {
+    transition:
+        transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+        background-color 160ms ease-out,
+        color 160ms ease-out;
+}
+
+.press:active {
+    transform: scale(0.97);
+}

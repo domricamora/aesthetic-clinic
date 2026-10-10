@@ -82,7 +82,7 @@ export default function InventoryIndex({
             }
             className={`border px-4 py-3 text-left transition-colors duration-150 ease-out ${
                 alert === key
-                    ? 'border-plum'
+                    ? 'border-clay-deep'
                     : 'border-border hover:bg-mist dark:hover:bg-white/5'
             }`}
         >
@@ -123,7 +123,7 @@ export default function InventoryIndex({
                                     }
                                     className={
                                         item.id === branch.id
-                                            ? 'h-10 bg-plum px-3 text-sm text-white'
+                                            ? 'h-10 bg-clay-deep px-3 text-sm text-white'
                                             : 'h-10 px-3 text-sm hover:bg-mist dark:hover:bg-white/5'
                                     }
                                 >
@@ -150,7 +150,7 @@ export default function InventoryIndex({
                                             query: { branch: branch.id },
                                         }).url
                                     }
-                                    className="press inline-flex h-10 items-center gap-2 bg-plum px-4 text-sm font-medium text-white hover:bg-plum-deep"
+                                    className="press inline-flex h-10 items-center gap-2 bg-clay-deep px-4 text-sm font-medium text-white hover:bg-clay-ink"
                                 >
                                     <PackagePlus className="h-4 w-4" />
                                     Receive stock

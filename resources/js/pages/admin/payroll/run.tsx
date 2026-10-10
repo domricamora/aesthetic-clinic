@@ -93,7 +93,7 @@ export default function PayrollRun({ run, payslips, totals, statuses }: Props) {
                                             { preserveScroll: true },
                                         )
                                     }
-                                    className="h-10 bg-plum text-white hover:bg-plum-deep"
+                                    className="h-10 bg-clay-deep text-white hover:bg-clay-ink"
                                 >
                                     <CheckCircle2 className="h-4 w-4" />
                                     Approve and post
@@ -108,7 +108,7 @@ export default function PayrollRun({ run, payslips, totals, statuses }: Props) {
                                             preserveScroll: true,
                                         })
                                     }
-                                    className="h-10 bg-plum text-white hover:bg-plum-deep"
+                                    className="h-10 bg-clay-deep text-white hover:bg-clay-ink"
                                 >
                                     <Banknote className="h-4 w-4" />
                                     Mark as paid

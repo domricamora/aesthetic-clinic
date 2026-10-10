@@ -103,7 +103,7 @@ export default function TreatmentShow({
 
                     <Link
                         href={book({ query: { treatment: t.id } }).url}
-                        className="press mt-8 inline-flex h-13 items-center gap-2 bg-plum px-7 font-medium text-white hover:bg-violet"
+                        className="press mt-8 inline-flex h-13 items-center gap-2 rounded-md bg-clay-deep px-7 font-medium text-white hover:bg-clay-ink"
                     >
                         Book {t.name} <ArrowRight className="size-4" />
                     </Link>

@@ -377,7 +377,7 @@ export default function InventoryReceive({
                         <Button
                             type="submit"
                             disabled={form.processing || ready.length === 0}
-                            className="ml-auto h-11 bg-plum text-white hover:bg-plum-deep"
+                            className="ml-auto h-11 bg-clay-deep text-white hover:bg-clay-ink"
                         >
                             {form.processing && <Spinner />}
                             {ready.length > 1

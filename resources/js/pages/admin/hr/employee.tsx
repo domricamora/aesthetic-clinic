@@ -249,7 +249,7 @@ export default function HrEmployee(props: Props) {
                             <Button
                                 type="button"
                                 onClick={() => setEditing(true)}
-                                className="h-10 bg-plum text-white hover:bg-plum-deep"
+                                className="h-10 bg-clay-deep text-white hover:bg-clay-ink"
                             >
                                 <Pencil className="h-4 w-4" />
                                 Edit record
@@ -692,7 +692,7 @@ export default function HrEmployee(props: Props) {
                             <Button
                                 type="submit"
                                 disabled={form.processing}
-                                className="h-10 bg-plum text-white hover:bg-plum-deep"
+                                className="h-10 bg-clay-deep text-white hover:bg-clay-ink"
                             >
                                 {form.processing && <Spinner />}
                                 Save
@@ -985,7 +985,7 @@ export default function HrEmployee(props: Props) {
                                         <Button
                                             type="submit"
                                             disabled={deduction.processing}
-                                            className="h-9 bg-plum text-white hover:bg-plum-deep"
+                                            className="h-9 bg-clay-deep text-white hover:bg-clay-ink"
                                         >
                                             {deduction.processing && (
                                                 <Spinner />

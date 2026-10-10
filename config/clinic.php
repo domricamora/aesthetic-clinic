@@ -27,8 +27,8 @@ return [
      * offered first and the PNG is the fallback, so a browser that will not
      * take it still gets the mark rather than a broken image icon.
      */
-    'logo' => env('CLINIC_LOGO', 'media/brand/logo.webp'),
-    'logo_fallback' => env('CLINIC_LOGO_FALLBACK', 'media/brand/logo.png'),
+    'logo' => env('CLINIC_LOGO', 'media/brand/mark.svg'),
+    'logo_fallback' => env('CLINIC_LOGO_FALLBACK', 'media/brand/mark.svg'),
 
     /*
      * Brand palette. Mirrors the @theme tokens in resources/css/app.css; the CSS

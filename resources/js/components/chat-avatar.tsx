@@ -34,7 +34,7 @@ export function ChatAvatar({
             className={cn(
                 'flex size-7 shrink-0 items-center justify-center overflow-hidden rounded-full text-[10px] font-medium',
                 side === 'staff'
-                    ? 'bg-plum text-white'
+                    ? 'bg-clay-deep text-white'
                     : 'bg-mist text-muted-foreground dark:bg-white/10',
                 className,
             )}

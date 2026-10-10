@@ -27,21 +27,18 @@ export default function LegalPage({ page, others }: Props) {
                 <meta name="description" content={page.summary ?? undefined} />
             </Head>
 
-            <section className="on-dark bg-plum gutter pt-16 pb-12 text-white lg:pt-24">
+            <section className="bg-blush gutter pt-16 pb-12 text-cocoa lg:pt-24">
                 <div className="mx-auto max-w-7xl">
-                    <p className="eyebrow">
-                        {page.summary ? 'The detail' : 'Clinic policy'}
-                    </p>
                     <h1 className="mt-4 max-w-3xl text-5xl leading-[1.05] sm:text-6xl">
                         {page.title}
                     </h1>
                     {page.summary && (
-                        <p className="mt-6 max-w-2xl text-lg text-lilac">
+                        <p className="mt-6 max-w-2xl text-lg text-text">
                             {page.summary}
                         </p>
                     )}
                     {page.reviewed_on && (
-                        <p className="numerals mt-6 text-sm text-lilac">
+                        <p className="numerals mt-6 text-sm text-text">
                             Last reviewed {reviewed(page.reviewed_on)}
                         </p>
                     )}

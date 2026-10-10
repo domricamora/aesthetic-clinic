@@ -181,7 +181,7 @@ export default function HrLeave({
                             <Button
                                 type="submit"
                                 disabled={request.processing}
-                                className="h-10 bg-plum text-white hover:bg-plum-deep"
+                                className="h-10 bg-clay-deep text-white hover:bg-clay-ink"
                             >
                                 {request.processing && <Spinner />}
                                 File request

@@ -116,7 +116,7 @@ export default function LeadShow({
                                         query: { lead: lead.id },
                                     }).url
                                 }
-                                className="inline-flex items-center gap-2 bg-plum px-4 py-2 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-plum-deep active:scale-[0.97]"
+                                className="inline-flex items-center gap-2 bg-clay-deep px-4 py-2 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-clay-ink active:scale-[0.97]"
                             >
                                 <CalendarPlus className="size-4" aria-hidden />{' '}
                                 Book a visit
@@ -125,7 +125,7 @@ export default function LeadShow({
                         {lead.phone && (
                             <a
                                 href={`tel:${lead.phone.replace(/\s/g, '')}`}
-                                className="inline-flex items-center gap-2 bg-plum px-4 py-2 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-plum-deep active:scale-[0.97]"
+                                className="inline-flex items-center gap-2 bg-clay-deep px-4 py-2 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-clay-ink active:scale-[0.97]"
                             >
                                 <Phone className="size-4" aria-hidden /> Call{' '}
                                 {lead.phone}
@@ -134,7 +134,7 @@ export default function LeadShow({
                         {lead.email && (
                             <a
                                 href={`mailto:${lead.email}`}
-                                className="inline-flex items-center gap-2 border border-plum px-4 py-2 text-sm font-medium text-plum transition-[background-color,transform] duration-150 ease-out hover:bg-lilac/50 active:scale-[0.97] dark:border-lilac dark:text-lilac"
+                                className="inline-flex items-center gap-2 border border-clay-deep px-4 py-2 text-sm font-medium text-plum transition-[background-color,transform] duration-150 ease-out hover:bg-lilac/50 active:scale-[0.97] dark:border-lilac dark:text-lilac"
                             >
                                 <Mail className="size-4" aria-hidden /> Email
                             </a>
@@ -156,9 +156,9 @@ export default function LeadShow({
                                       : 'ahead';
                             const cls = cn(
                                 'flex h-full w-full flex-col items-start gap-1 px-3 py-2.5 text-left text-xs transition-colors duration-150 ease-out',
-                                state === 'current' && 'bg-plum text-white',
+                                state === 'current' && 'bg-clay-deep text-white',
                                 state === 'done' &&
-                                    'bg-lilac/60 text-plum dark:bg-plum/40 dark:text-lilac',
+                                    'bg-lilac/60 text-plum dark:bg-clay-deep/40 dark:text-lilac',
                                 state === 'ahead' &&
                                     'bg-background text-muted-foreground',
                             );
@@ -241,7 +241,7 @@ export default function LeadShow({
                                         note.processing ||
                                         !note.data.note.trim()
                                     }
-                                    className="mt-2 bg-plum px-4 py-2 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-plum-deep active:scale-[0.97] disabled:opacity-50"
+                                    className="mt-2 bg-clay-deep px-4 py-2 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-clay-ink active:scale-[0.97] disabled:opacity-50"
                                 >
                                     Add note
                                 </button>
@@ -259,7 +259,7 @@ export default function LeadShow({
                                             'absolute top-1.5 -left-[4.5px] size-2 rotate-45',
                                             a.type === 'note'
                                                 ? 'bg-gold'
-                                                : 'bg-plum/40 dark:bg-lilac/60',
+                                                : 'bg-clay-deep/40 dark:bg-lilac/60',
                                         )}
                                     />
                                     <p className="text-sm whitespace-pre-line">

@@ -22,12 +22,12 @@ export default function TreatmentsIndex({
                 />
             </Head>
 
-            <section className="on-dark bg-plum gutter pt-16 pb-14 text-white lg:pt-24">
+            <section className="bg-blush gutter pt-16 pb-14 text-cocoa lg:pt-24">
                 <div className="mx-auto max-w-7xl">
                     <h1 className="max-w-3xl text-5xl leading-[1.05] sm:text-7xl">
-                        Treatments, <em className="text-champagne">priced plainly.</em>
+                        Treatments, <em className="text-clay-ink">priced plainly.</em>
                     </h1>
-                    <p className="mt-6 max-w-xl text-lg text-lilac">
+                    <p className="mt-6 max-w-xl text-lg text-text">
                         Every price below is the starting price for one session.
                         Your doctor confirms the plan and total before anything
                         begins.

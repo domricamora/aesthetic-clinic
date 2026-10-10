@@ -30,14 +30,14 @@ export default function BlogShow({ post, related }: Props) {
             </Head>
 
             <article>
-                <header className="on-dark gutter bg-plum pt-16 pb-12 text-white lg:pt-24">
+                <header className="gutter bg-blush pt-16 pb-12 text-cocoa lg:pt-24">
                     <p className="eyebrow">
                         {post.category}
                     </p>
                     <h1 className="mt-4 max-w-4xl text-4xl leading-[1.1] sm:text-6xl">
                         {post.title}
                     </h1>
-                    <p className="numerals mt-6 text-sm text-lilac">
+                    <p className="numerals mt-6 text-sm text-text">
                         {day.format(new Date(post.published_at))} ·{' '}
                         {post.read_minutes} min read · {post.author_name}
                     </p>
@@ -113,7 +113,7 @@ export default function BlogShow({ post, related }: Props) {
                             </p>
                             <Link
                                 href={book().url}
-                                className="press mt-6 inline-flex w-full items-center justify-center gap-2 bg-plum px-5 py-3 text-sm font-medium text-white hover:bg-plum-deep"
+                                className="press mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-clay-deep px-5 py-3 text-sm font-medium text-white hover:bg-clay-ink"
                             >
                                 Book a consultation
                                 <ArrowRight className="size-4" />

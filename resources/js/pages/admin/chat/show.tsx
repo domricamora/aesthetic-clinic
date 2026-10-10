@@ -164,7 +164,7 @@ export default function ChatThread({ conversation, messages }: Props) {
                                 <div
                                     className={
                                         staff
-                                            ? 'rounded-2xl rounded-br-sm bg-plum px-4 py-2 text-white'
+                                            ? 'rounded-2xl rounded-br-sm bg-clay-deep px-4 py-2 text-white'
                                             : 'rounded-2xl rounded-bl-sm bg-mist px-4 py-2 dark:bg-white/5'
                                     }
                                 >

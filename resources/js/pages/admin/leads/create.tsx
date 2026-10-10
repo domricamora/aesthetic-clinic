@@ -214,7 +214,7 @@ export default function LeadCreate({ sources, treatments, branches }: Props) {
                     <button
                         type="submit"
                         disabled={form.processing}
-                        className="bg-plum px-5 py-2.5 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-plum-deep active:scale-[0.97] disabled:opacity-50"
+                        className="bg-clay-deep px-5 py-2.5 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-clay-ink active:scale-[0.97] disabled:opacity-50"
                     >
                         Add lead
                     </button>

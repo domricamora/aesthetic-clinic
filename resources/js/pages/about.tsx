@@ -60,16 +60,13 @@ export default function About({
                 />
             </Head>
 
-            <section className="on-dark bg-plum gutter pt-16 pb-14 text-white lg:pt-24">
+            <section className="bg-blush gutter pt-16 pb-14 text-cocoa lg:pt-24">
                 <div className="mx-auto max-w-7xl">
-                    <p className="eyebrow">
-                        About
-                    </p>
                     <h1 className="mt-4 max-w-4xl text-5xl leading-[1.05] sm:text-7xl">
                         A clinic built around the{' '}
-                        <em className="text-champagne">assessment</em>, not the upsell.
+                        <em className="text-clay-ink">assessment</em>, not the upsell.
                     </h1>
-                    <p className="mt-6 max-w-2xl text-lg text-lilac">
+                    <p className="mt-6 max-w-2xl text-lg text-text">
                         {clinic.name} is a physician-led aesthetic and wellness
                         clinic. {clinic.tagline} We plan treatment around your skin,
                         your history and your calendar, and we say plainly when a
@@ -255,11 +252,11 @@ export default function About({
             </section>
 
             {testimonials.length > 0 && (
-                <section className="on-dark bg-plum gutter py-20 text-white lg:py-28">
+                <section className="bg-blush gutter py-20 text-cocoa lg:py-28">
                     <h2 data-reveal className="text-3xl sm:text-4xl">
                         In their words
                     </h2>
-                    <p className="mt-4 max-w-lg text-sm text-lilac">
+                    <p className="mt-4 max-w-lg text-sm text-text">
                         Demo testimonials written for this demonstration clinic.
                         Reviews are only published with permission.
                     </p>
@@ -269,12 +266,12 @@ export default function About({
                                 key={t.id}
                                 data-reveal
                                 style={stagger(i)}
-                                className="border-t border-white/20 pt-6"
+                                className="border-t border-border pt-6"
                             >
                                 <p className="font-display text-2xl leading-snug">
                                     {t.quote}
                                 </p>
-                                <footer className="mt-4 text-sm text-lilac">
+                                <footer className="mt-4 text-sm text-text">
                                     {t.author_name}
                                     {t.author_meta ? `, ${t.author_meta}` : ''}
                                 </footer>
@@ -315,7 +312,7 @@ export default function About({
                     </h2>
                     <Link
                         href={book().url}
-                        className="press inline-flex items-center gap-2 bg-plum px-6 py-3 text-sm font-medium text-white hover:bg-plum-deep"
+                        className="press inline-flex items-center gap-2 rounded-md bg-clay-deep px-6 py-3 text-sm font-medium text-white hover:bg-clay-ink"
                     >
                         Book a consultation <ArrowRight className="size-4" />
                     </Link>

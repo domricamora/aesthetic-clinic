@@ -19,6 +19,7 @@ const sitePages = [
     'promotions',
     'before-after',
     'legal',
+    'platform',
 ];
 
 void createInertiaApp({

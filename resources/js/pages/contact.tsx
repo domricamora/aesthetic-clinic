@@ -44,16 +44,13 @@ export default function Contact({ branches, treatments }: Props) {
                 />
             </Head>
 
-            <section className="on-dark bg-plum gutter pt-16 pb-14 text-white lg:pt-24">
+            <section className="bg-blush gutter pt-16 pb-14 text-cocoa lg:pt-24">
                 <div className="mx-auto max-w-7xl">
-                    <p className="eyebrow">
-                        Contact
-                    </p>
                     <h1 className="mt-4 max-w-4xl text-5xl leading-[1.05] sm:text-7xl">
                         Talk to us before you{' '}
-                        <em className="text-champagne">decide anything.</em>
+                        <em className="text-clay-ink">decide anything.</em>
                     </h1>
-                    <p className="mt-6 max-w-2xl text-lg text-lilac">
+                    <p className="mt-6 max-w-2xl text-lg text-text">
                         Call the branch, send a message, or book a consultation
                         straight from the calendar. A clinician answers clinical
                         questions; the front desk handles everything else.
@@ -61,13 +58,13 @@ export default function Contact({ branches, treatments }: Props) {
                     <div className="mt-10 flex flex-wrap items-center gap-6 text-sm">
                         <a
                             href={`tel:${clinic.contact.phone.replace(/\s/g, '')}`}
-                            className="text-white hover:text-champagne"
+                            className="text-cocoa hover:text-clay-ink"
                         >
                             {clinic.contact.phone}
                         </a>
                         <a
                             href={`mailto:${clinic.contact.email}`}
-                            className="text-white hover:text-champagne"
+                            className="text-cocoa hover:text-clay-ink"
                         >
                             {clinic.contact.email}
                         </a>
@@ -238,7 +235,7 @@ export default function Contact({ branches, treatments }: Props) {
                         <button
                             type="submit"
                             disabled={form.processing}
-                            className="press w-full bg-plum px-6 py-3 text-sm font-medium text-white hover:bg-plum-deep disabled:opacity-50 sm:w-auto"
+                            className="press w-full rounded-md bg-clay-deep px-6 py-3 text-sm font-medium text-white hover:bg-clay-ink disabled:opacity-50 sm:w-auto"
                         >
                             {form.processing ? 'Sending...' : 'Send message'}
                         </button>
@@ -315,7 +312,7 @@ export default function Contact({ branches, treatments }: Props) {
                                         <div className="mt-5 flex flex-wrap gap-4 text-sm">
                                             <Link
                                                 href={`${book().url}?branch=${branch.slug}`}
-                                                className="press inline-flex items-center gap-2 bg-plum px-5 py-2.5 text-sm font-medium text-white hover:bg-plum-deep"
+                                                className="press inline-flex items-center gap-2 rounded-md bg-clay-deep px-5 py-2.5 text-sm font-medium text-white hover:bg-clay-ink"
                                             >
                                                 Book at {branch.name}
                                             </Link>

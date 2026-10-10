@@ -31,15 +31,12 @@ export default function Promotions({ promotions, tiers }: Props) {
                 />
             </Head>
 
-            <section className="on-dark bg-plum gutter pt-16 pb-14 text-white lg:pt-24">
+            <section className="bg-blush gutter pt-16 pb-14 text-cocoa lg:pt-24">
                 <div className="mx-auto max-w-7xl">
-                    <p className="eyebrow">
-                        Promotions
-                    </p>
                     <h1 className="mt-4 max-w-4xl text-5xl leading-[1.05] sm:text-7xl">
-                        Offers, <em className="text-champagne">written plainly.</em>
+                        Offers, <em className="text-clay-ink">written plainly.</em>
                     </h1>
-                    <p className="mt-6 max-w-2xl text-lg text-lilac">
+                    <p className="mt-6 max-w-2xl text-lg text-text">
                         Each offer below says what is included, what it costs and
                         when it ends. No countdown timers, no conditions buried in
                         small print, and every treatment still begins with an
@@ -108,7 +105,7 @@ export default function Promotions({ promotions, tiers }: Props) {
                                 <div className="mt-6 flex flex-wrap items-center gap-4">
                                     <Link
                                         href={book().url}
-                                        className="press inline-flex items-center gap-2 bg-plum px-6 py-3 text-sm font-medium text-white hover:bg-plum-deep"
+                                        className="press inline-flex items-center gap-2 rounded-md bg-clay-deep px-6 py-3 text-sm font-medium text-white hover:bg-clay-ink"
                                     >
                                         Book this
                                         <ArrowRight className="size-4" />
@@ -144,13 +141,13 @@ export default function Promotions({ promotions, tiers }: Props) {
             </section>
 
             {tiers.length > 0 && (
-                <section className="on-dark bg-plum-deep gutter py-20 text-white lg:py-24">
+                <section className="bg-soft-rose gutter py-20 text-cocoa lg:py-24">
                     <div className="grid gap-12 lg:grid-cols-12">
                         <div className="lg:col-span-5">
                             <h2 data-reveal className="text-3xl sm:text-4xl">
                                 Better than a promo: a plan
                             </h2>
-                            <p className="mt-5 max-w-md text-sm text-lilac">
+                            <p className="mt-5 max-w-md text-sm text-text">
                                 Offers suit a one off. If you plan to come back
                                 a few times this year, membership usually costs
                                 less across the year and keeps your records in
@@ -166,7 +163,7 @@ export default function Promotions({ promotions, tiers }: Props) {
                         </div>
                         <dl className="grid gap-px bg-white/15 sm:grid-cols-3 lg:col-span-7">
                             {tiers.map((tier) => (
-                                <div key={tier.id} className="bg-plum-deep p-6">
+                                <div key={tier.id} className="bg-soft-rose p-6">
                                     <dt className="text-lg">{tier.name}</dt>
                                     <dd className="numerals mt-3 font-display text-3xl">
                                         {formatPrice(tier.price_monthly)}
@@ -174,7 +171,7 @@ export default function Promotions({ promotions, tiers }: Props) {
                                             / month
                                         </span>
                                     </dd>
-                                    <dd className="mt-3 text-xs text-lilac">
+                                    <dd className="mt-3 text-xs text-text">
                                         {tier.tagline}
                                     </dd>
                                 </div>
@@ -201,7 +198,7 @@ export default function Promotions({ promotions, tiers }: Props) {
                     </p>
                     <Link
                         href={book().url}
-                        className="press inline-flex items-center gap-2 bg-plum px-6 py-3 text-sm font-medium text-white hover:bg-plum-deep"
+                        className="press inline-flex items-center gap-2 rounded-md bg-clay-deep px-6 py-3 text-sm font-medium text-white hover:bg-clay-ink"
                     >
                         Book a consultation <ArrowRight className="size-4" />
                     </Link>

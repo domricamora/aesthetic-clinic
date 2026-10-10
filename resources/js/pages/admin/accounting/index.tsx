@@ -231,7 +231,7 @@ export default function AccountingIndex(props: Props) {
                                             'inline-flex border px-2 py-1 text-xs',
                                             p.status === 'closed'
                                                 ? 'border-border bg-background text-muted-foreground'
-                                                : 'border-plum/30 bg-lilac/60 text-plum',
+                                                : 'border-clay-deep/30 bg-lilac/60 text-plum',
                                         )}
                                     >
                                         {p.status}

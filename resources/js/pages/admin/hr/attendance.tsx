@@ -96,7 +96,7 @@ export default function HrAttendance({
                                     'h-10 text-white',
                                     inWorking
                                         ? 'bg-destructive hover:bg-destructive/90'
-                                        : 'bg-plum hover:bg-plum-deep',
+                                        : 'bg-clay-deep hover:bg-clay-ink',
                                 )}
                             >
                                 {form.processing && <Spinner />}

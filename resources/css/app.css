@@ -161,11 +161,11 @@
     --border: #ecdcd5;
     --input: #e2cdc5;
     --ring: #c4877a;
-    --chart-1: #a4604f;
-    --chart-2: #d9a99b;
-    --chart-3: #6f7f73;
-    --chart-4: #e6c2b3;
-    --chart-5: #3b2a28;
+    --chart-1: #b4553f;
+    --chart-2: #008f9e;
+    --chart-3: #b8860b;
+    --chart-4: #7b5ba6;
+    --chart-5: #4f8f3a;
     --radius: 0.625rem;
     --sidebar: #f6ece8;
     --sidebar-foreground: #3b2a28;
@@ -197,11 +197,11 @@
     --border: #45332f;
     --input: #55403b;
     --ring: #e3a796;
-    --chart-1: #e3a796;
-    --chart-2: #b97b6b;
-    --chart-3: #9fb0a3;
-    --chart-4: #f2d6ca;
-    --chart-5: #f8eeea;
+    --chart-1: #c96a52;
+    --chart-2: #14949f;
+    --chart-3: #b98a20;
+    --chart-4: #8e6ec0;
+    --chart-5: #5e9848;
     --sidebar: #1c1413;
     --sidebar-foreground: #f2e3dd;
     --sidebar-primary: #e3a796;
@@ -230,6 +230,27 @@
 
     p {
         text-wrap: pretty;
+    }
+
+    /* Gilda has no italic, so an emphasised word in a heading is set upright
+       in clay rather than letting the browser slant the roman. */
+    :is(h1, h2, h3) em {
+        font-style: normal;
+        color: var(--color-clay-ink);
+    }
+
+    /* The soft corner on every control. Plain selectors so they beat the
+       preflight reset in this same base layer; any rounded-* utility still
+       wins, because utilities are a later layer. */
+    input:not([type='checkbox'], [type='radio'], [type='range']),
+    select,
+    textarea,
+    button {
+        border-radius: var(--radius-md);
+    }
+
+    input[type='checkbox'] {
+        border-radius: 3px;
     }
 
     ::selection {
@@ -405,6 +426,47 @@
     .reveal-ready [data-reveal].is-in {
         opacity: 1;
         transform: none;
+    }
+}
+
+/* The hero's one authored moment: each line settles in on load, 60ms apart.
+   Reduced motion keeps a plain fade. */
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+}
+
+.hero-rise > * {
+    animation: fade 280ms ease-out both;
+    animation-delay: calc(120ms + var(--i, 0) * 60ms);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .hero-rise > * {
+        animation-name: rise;
+        animation-timing-function: var(--ease-out-soft);
+    }
+}
+
+/* Cards lift on hover, only where a pointer can hover. */
+.hover-lift {
+    transition:
+        transform 220ms var(--ease-out-soft),
+        box-shadow 220ms ease-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .hover-lift:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lift);
     }
 }
 

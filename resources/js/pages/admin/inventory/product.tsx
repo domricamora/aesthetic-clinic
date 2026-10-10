@@ -78,7 +78,7 @@ export default function InventoryProduct({
                                             },
                                         }).url
                                     }
-                                    className="press inline-flex h-10 items-center gap-2 bg-plum px-4 text-sm font-medium text-white hover:bg-plum-deep"
+                                    className="press inline-flex h-10 items-center gap-2 bg-clay-deep px-4 text-sm font-medium text-white hover:bg-clay-ink"
                                 >
                                     <PackagePlus className="h-4 w-4" />
                                     Receive
@@ -122,7 +122,7 @@ export default function InventoryProduct({
                                     className={cn(
                                         'h-10 px-3 text-sm',
                                         item.id === branch.id
-                                            ? 'bg-plum text-white'
+                                            ? 'bg-clay-deep text-white'
                                             : 'hover:bg-mist dark:hover:bg-white/5',
                                     )}
                                 >

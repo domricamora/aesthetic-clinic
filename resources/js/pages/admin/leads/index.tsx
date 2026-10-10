@@ -38,7 +38,7 @@ export default function LeadsIndex({
             className={cn(
                 '-mb-px shrink-0 border-b-2 px-3 py-3 text-sm whitespace-nowrap transition-colors duration-150 ease-out',
                 filters.stage === stage
-                    ? 'border-plum font-medium text-plum dark:border-lilac dark:text-lilac'
+                    ? 'border-clay-deep font-medium text-plum dark:border-lilac dark:text-lilac'
                     : 'border-transparent text-muted-foreground hover:text-foreground',
             )}
         >
@@ -64,7 +64,7 @@ export default function LeadsIndex({
                         {can('leads.create') && (
                             <Link
                                 href={leads.create().url}
-                                className="press inline-flex h-10 shrink-0 items-center gap-2 bg-plum px-4 text-sm font-medium text-white hover:bg-plum-deep"
+                                className="press inline-flex h-10 shrink-0 items-center gap-2 bg-clay-deep px-4 text-sm font-medium text-white hover:bg-clay-ink"
                             >
                                 <Plus className="size-4" aria-hidden /> Add lead
                             </Link>
@@ -212,7 +212,7 @@ export default function LeadsIndex({
                                         className={cn(
                                             '-ml-px border border-border px-3 py-1.5',
                                             link.active &&
-                                                'relative border-plum bg-plum text-white',
+                                                'relative border-clay-deep bg-clay-deep text-white',
                                         )}
                                     >
                                         {pageLabel(link.label)}

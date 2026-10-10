@@ -67,7 +67,7 @@ function CatalogueTabs({ tab }: { tab: string }) {
                     className={cn(
                         'press h-10 border px-4 text-sm',
                         tab === item.key
-                            ? 'border-plum bg-lilac/60 text-plum'
+                            ? 'border-clay-deep bg-lilac/60 text-plum'
                             : 'border-border bg-background hover:bg-mist dark:hover:bg-white/5',
                     )}
                 >
@@ -217,7 +217,7 @@ export default function CatalogIndex(props: Props) {
                             <Button
                                 type="button"
                                 onClick={() => setAdding((v) => !v)}
-                                className="h-10 bg-plum text-white hover:bg-plum-deep"
+                                className="h-10 bg-clay-deep text-white hover:bg-clay-ink"
                             >
                                 {adding ? (
                                     <X className="h-4 w-4" />
@@ -390,7 +390,7 @@ export default function CatalogIndex(props: Props) {
                                     <Button
                                         type="submit"
                                         disabled={create.processing}
-                                        className="h-10 bg-plum text-white hover:bg-plum-deep"
+                                        className="h-10 bg-clay-deep text-white hover:bg-clay-ink"
                                     >
                                         {create.processing && <Spinner />}
                                         Add item
@@ -639,7 +639,7 @@ export default function CatalogIndex(props: Props) {
                                                                     },
                                                                 )
                                                             }
-                                                            className="bg-plum text-white hover:bg-plum-deep"
+                                                            className="bg-clay-deep text-white hover:bg-clay-ink"
                                                         >
                                                             {update.processing ? (
                                                                 <Spinner />
@@ -719,7 +719,7 @@ export default function CatalogIndex(props: Props) {
                                                         className={cn(
                                                             'inline-flex border px-2 py-1 text-xs',
                                                             row.is_active
-                                                                ? 'border-plum/30 bg-lilac/60 text-plum'
+                                                                ? 'border-clay-deep/30 bg-lilac/60 text-plum'
                                                                 : 'border-border bg-background text-muted-foreground',
                                                         )}
                                                     >

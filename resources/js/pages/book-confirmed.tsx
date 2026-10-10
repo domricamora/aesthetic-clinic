@@ -48,18 +48,18 @@ export default function BookConfirmed({ appointment: a }: Props) {
     return (
         <>
             <Head title="Appointment requested" />
-            <section className="on-dark bg-plum gutter py-16 text-white lg:py-24">
+            <section className="bg-blush gutter py-16 text-cocoa lg:py-24">
                 <div className="mx-auto max-w-7xl">
                 <div className="grid items-center gap-12 lg:grid-cols-12">
                     <div className="lg:col-span-6">
-                        <span className="inline-grid size-12 place-items-center border border-gold text-champagne">
+                        <span className="inline-grid size-12 place-items-center border border-gold text-clay-ink">
                             <Check className="size-6" aria-hidden="true" />
                         </span>
                         <h1 className="mt-6 text-5xl leading-[1.05] sm:text-6xl">
                             Thank you{a.first_name ? `, ${a.first_name}` : ''}.{' '}
-                            <em className="text-champagne">Your time is held.</em>
+                            <em className="text-clay-ink">Your time is held.</em>
                         </h1>
-                        <p className="mt-6 max-w-lg text-lg text-lilac">
+                        <p className="mt-6 max-w-lg text-lg text-text">
                             We will text you to confirm within the hour during
                             clinic hours. Keep your reference handy if you need
                             to call the branch.
@@ -75,7 +75,7 @@ export default function BookConfirmed({ appointment: a }: Props) {
                         <div className="card-stock p-7 text-ink lg:col-span-5 lg:col-start-8">
                             <div className="flex items-baseline justify-between">
                                 <h2 className="text-2xl">Your appointment</h2>
-                                <span className="numerals border border-plum px-2 py-0.5 text-xs font-medium text-plum">
+                                <span className="numerals border border-clay-deep px-2 py-0.5 text-xs font-medium text-plum">
                                     {a.reference}
                                 </span>
                             </div>

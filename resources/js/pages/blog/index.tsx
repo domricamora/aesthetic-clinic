@@ -44,16 +44,13 @@ export default function BlogIndex({ posts, filter, categories }: Props) {
                 />
             </Head>
 
-            <section className="on-dark bg-plum gutter pt-16 pb-14 text-white lg:pt-24">
+            <section className="bg-blush gutter pt-16 pb-14 text-cocoa lg:pt-24">
                 <div className="mx-auto max-w-7xl">
-                    <p className="eyebrow">
-                        Journal
-                    </p>
                     <h1 className="mt-4 max-w-4xl text-5xl leading-[1.05] sm:text-7xl">
                         Notes from the{' '}
-                        <em className="text-champagne">treatment room.</em>
+                        <em className="text-clay-ink">treatment room.</em>
                     </h1>
-                    <p className="mt-6 max-w-2xl text-lg text-lilac">
+                    <p className="mt-6 max-w-2xl text-lg text-text">
                         Guidance written by our practitioners: what a treatment
                         involves, how to care for your skin afterwards, and when a
                         result is worth judging. General information only, not a
@@ -72,7 +69,7 @@ export default function BlogIndex({ posts, filter, categories }: Props) {
                     className={cn(
                         'press shrink-0 border px-4 py-2 text-sm',
                         filter === null
-                            ? 'border-plum bg-plum text-white'
+                            ? 'border-clay-deep bg-clay-deep text-white'
                             : 'border-border hover:border-violet',
                     )}
                 >
@@ -90,7 +87,7 @@ export default function BlogIndex({ posts, filter, categories }: Props) {
                         className={cn(
                             'press shrink-0 border px-4 py-2 text-sm',
                             filter === category
-                                ? 'border-plum bg-plum text-white'
+                                ? 'border-clay-deep bg-clay-deep text-white'
                                 : 'border-border hover:border-violet',
                         )}
                     >
@@ -215,7 +212,7 @@ export default function BlogIndex({ posts, filter, categories }: Props) {
                                         className={cn(
                                             '-ml-px border border-border px-3 py-1.5',
                                             link.active &&
-                                                'relative border-plum bg-plum text-white',
+                                                'relative border-clay-deep bg-clay-deep text-white',
                                         )}
                                     >
                                         {pageLabel(link.label)}
@@ -241,7 +238,7 @@ export default function BlogIndex({ posts, filter, categories }: Props) {
                     </h2>
                     <Link
                         href={book().url}
-                        className="press inline-flex items-center gap-2 bg-plum px-6 py-3 text-sm font-medium text-white hover:bg-plum-deep"
+                        className="press inline-flex items-center gap-2 rounded-md bg-clay-deep px-6 py-3 text-sm font-medium text-white hover:bg-clay-ink"
                     >
                         Book a consultation <ArrowRight className="size-4" />
                     </Link>

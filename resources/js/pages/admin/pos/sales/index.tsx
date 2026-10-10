@@ -106,7 +106,7 @@ export default function PosSales({
                                     }
                                     className={
                                         item.id === branch
-                                            ? 'h-10 bg-plum px-3 text-sm text-white'
+                                            ? 'h-10 bg-clay-deep px-3 text-sm text-white'
                                             : 'h-10 px-3 text-sm hover:bg-mist dark:hover:bg-white/5'
                                     }
                                 >
@@ -116,7 +116,7 @@ export default function PosSales({
                         </div>
                         <Link
                             href={pos.index().url}
-                            className="press inline-flex h-10 items-center bg-plum px-4 text-sm font-medium text-white hover:bg-plum-deep"
+                            className="press inline-flex h-10 items-center bg-clay-deep px-4 text-sm font-medium text-white hover:bg-clay-ink"
                         >
                             Open the register
                         </Link>

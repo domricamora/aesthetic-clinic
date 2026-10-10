@@ -275,7 +275,7 @@ export default function AppointmentCreate({
                                                 className={cn(
                                                     'h-11 text-sm tabular-nums transition-colors duration-150 ease-out',
                                                     data.time === slot
-                                                        ? 'bg-plum text-white'
+                                                        ? 'bg-clay-deep text-white'
                                                         : 'bg-background hover:bg-mist dark:hover:bg-white/5',
                                                 )}
                                             >
@@ -307,7 +307,7 @@ export default function AppointmentCreate({
                                     className={cn(
                                         'flex cursor-pointer items-center gap-2 border px-3 py-2 text-sm',
                                         data.status === value
-                                            ? 'border-plum'
+                                            ? 'border-clay-deep'
                                             : 'border-border',
                                     )}
                                 >
@@ -466,7 +466,7 @@ export default function AppointmentCreate({
                     <button
                         type="submit"
                         disabled={form.processing || !data.time}
-                        className="bg-plum px-5 py-2.5 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-plum-deep active:scale-[0.97] disabled:opacity-50"
+                        className="bg-clay-deep px-5 py-2.5 text-sm font-medium text-white transition-[background-color,transform] duration-150 ease-out hover:bg-clay-ink active:scale-[0.97] disabled:opacity-50"
                     >
                         {moving ? 'Move appointment' : 'Book appointment'}
                     </button>

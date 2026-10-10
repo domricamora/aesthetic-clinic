@@ -45,16 +45,13 @@ export default function Membership({ tiers, branches, faqs }: Props) {
                 />
             </Head>
 
-            <section className="on-dark bg-plum gutter pt-16 pb-14 text-white lg:pt-24">
+            <section className="bg-blush gutter pt-16 pb-14 text-cocoa lg:pt-24">
                 <div className="mx-auto max-w-7xl">
-                    <p className="eyebrow">
-                        Membership
-                    </p>
                     <h1 className="mt-4 max-w-4xl text-5xl leading-[1.05] sm:text-7xl">
                         Skin that stays on track,{' '}
-                        <em className="text-champagne">month by month.</em>
+                        <em className="text-clay-ink">month by month.</em>
                     </h1>
-                    <p className="mt-6 max-w-2xl text-lg text-lilac">
+                    <p className="mt-6 max-w-2xl text-lg text-text">
                         A membership turns treatment into a rhythm: a monthly
                         allowance, member pricing and priority appointment times.
                         Cancel any month, at any branch, without a fee.
@@ -73,7 +70,7 @@ export default function Membership({ tiers, branches, faqs }: Props) {
                             Ask about joining
                         </Link>
                 </div>
-                <p className="mt-6 text-sm text-lilac">
+                <p className="mt-6 text-sm text-text">
                     GCash, Maya, bank transfer and cards accepted. No joining
                     fee, no lock in.
                 </p>
@@ -90,7 +87,7 @@ export default function Membership({ tiers, branches, faqs }: Props) {
                             className={cn(
                                 'flex flex-col p-8',
                                 tier.is_featured
-                                    ? 'on-dark bg-plum text-white'
+                                    ? 'on-dark bg-clay-deep text-white'
                                     : 'bg-white',
                             )}
                         >
@@ -157,7 +154,7 @@ export default function Membership({ tiers, branches, faqs }: Props) {
                                     'press mt-8 inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium',
                                     tier.is_featured
                                         ? 'bg-gold text-ink hover:bg-white'
-                                        : 'bg-plum text-white hover:bg-plum-deep',
+                                        : 'bg-clay-deep text-white hover:bg-clay-ink',
                                 )}
                             >
                                 Join {tier.name}
@@ -251,7 +248,7 @@ export default function Membership({ tiers, branches, faqs }: Props) {
                     </h2>
                     <Link
                         href={book().url}
-                        className="press inline-flex items-center gap-2 bg-plum px-6 py-3 text-sm font-medium text-white hover:bg-plum-deep"
+                        className="press inline-flex items-center gap-2 rounded-md bg-clay-deep px-6 py-3 text-sm font-medium text-white hover:bg-clay-ink"
                     >
                         Book a consultation <ArrowRight className="size-4" />
                     </Link>

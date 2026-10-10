@@ -30,7 +30,7 @@ export default function BeforeAfter({
                     className="absolute inset-0 h-full w-full object-cover [filter:saturate(0.75)_contrast(1.12)_brightness(0.93)_sepia(0.12)]"
                     style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
                 />
-                <span className="absolute top-4 left-4 bg-ink/80 px-2.5 py-1 text-xs text-white">
+                <span className="absolute top-4 left-4 bg-cocoa/80 px-2.5 py-1 text-xs text-white">
                     Before
                 </span>
                 <span className="absolute top-4 right-4 bg-white/90 px-2.5 py-1 text-xs text-ink">
@@ -41,7 +41,7 @@ export default function BeforeAfter({
                     className="absolute inset-y-0 w-px bg-white"
                     style={{ left: `${position}%` }}
                 >
-                    <span className="absolute top-1/2 left-1/2 grid size-11 -translate-x-1/2 -translate-y-1/2 place-items-center border border-white bg-plum text-white shadow-lg">
+                    <span className="absolute top-1/2 left-1/2 grid size-11 -translate-x-1/2 -translate-y-1/2 place-items-center border border-white bg-clay-deep text-white shadow-lg">
                         <svg
                             viewBox="0 0 24 24"
                             className="size-5"

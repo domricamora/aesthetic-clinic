@@ -170,7 +170,7 @@ export default function AnalyticsPanel({
                             }
                             className={`px-3 py-1.5 text-sm transition-colors duration-150 ease-out ${
                                 window.days === days
-                                    ? 'bg-plum text-white'
+                                    ? 'bg-clay-deep text-white'
                                     : 'bg-background hover:bg-mist dark:hover:bg-white/5'
                             }`}
                         >
@@ -344,7 +344,7 @@ export default function AnalyticsPanel({
                                         </div>
                                         <div className="mt-1.5 h-1 bg-mist dark:bg-white/10">
                                             <div
-                                                className="h-1 bg-plum"
+                                                className="h-1 bg-clay-deep"
                                                 style={{ width: `${share}%` }}
                                             />
                                         </div>

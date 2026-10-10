@@ -142,7 +142,7 @@ export default function PosIndex({
                                     className={cn(
                                         'h-10 px-3 text-sm transition-colors duration-150 ease-out',
                                         branch.id === branch_id
-                                            ? 'bg-plum text-white'
+                                            ? 'bg-clay-deep text-white'
                                             : 'bg-background hover:bg-mist dark:hover:bg-white/5',
                                     )}
                                 >
@@ -195,7 +195,7 @@ export default function PosIndex({
                                         className={cn(
                                             'h-10 border px-3 text-sm capitalize transition-colors duration-150 ease-out',
                                             filter === key
-                                                ? 'border-plum bg-plum text-white'
+                                                ? 'border-clay-deep bg-clay-deep text-white'
                                                 : 'border-border bg-background hover:bg-mist dark:hover:bg-white/5',
                                         )}
                                     >
@@ -221,7 +221,7 @@ export default function PosIndex({
                                         disabled={out}
                                         onClick={() => add(item)}
                                         className={cn(
-                                            'press flex flex-col items-start gap-1 border border-border bg-background p-3 text-left transition-colors duration-150 ease-out hover:border-plum/40 hover:bg-mist disabled:cursor-not-allowed disabled:opacity-50 dark:hover:bg-white/5',
+                                            'press flex flex-col items-start gap-1 border border-border bg-background p-3 text-left transition-colors duration-150 ease-out hover:border-clay-deep/40 hover:bg-mist disabled:cursor-not-allowed disabled:opacity-50 dark:hover:bg-white/5',
                                             out && 'hover:border-border',
                                         )}
                                     >
@@ -445,7 +445,7 @@ export default function PosIndex({
                                             className={cn(
                                                 'h-10 border px-2 text-sm transition-colors duration-150 ease-out',
                                                 method === key
-                                                    ? 'border-plum bg-plum text-white'
+                                                    ? 'border-clay-deep bg-clay-deep text-white'
                                                     : 'border-border bg-background hover:bg-mist dark:hover:bg-white/5',
                                             )}
                                         >
@@ -494,7 +494,7 @@ export default function PosIndex({
                                 type="button"
                                 onClick={complete}
                                 disabled={lines.length === 0 || busy}
-                                className="h-11 bg-plum text-white hover:bg-plum-deep"
+                                className="h-11 bg-clay-deep text-white hover:bg-clay-ink"
                             >
                                 {busy && <Spinner />}
                                 {lines.length === 0

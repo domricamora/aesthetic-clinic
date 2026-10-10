@@ -3,6 +3,7 @@ import { usePage } from '@inertiajs/react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ChatAvatar } from '@/components/chat-avatar';
 import { ChatEmoji } from '@/components/chat-emoji';
+import chat from '@/routes/chat';
 
 type Message = { from: string; body: string; at: string };
 
@@ -42,7 +43,7 @@ export function ChatWidget() {
     const { csrf } = usePage<{ csrf: string }>().props;
 
     useEffect(() => {
-        fetch('/chat/status')
+        fetch(chat.status().url)
             .then((r) => (r.ok ? r.json() : null))
             .then((data) => {
                 if (!data?.enabled) return;
@@ -53,7 +54,7 @@ export function ChatWidget() {
     }, []);
 
     const pull = useCallback(async () => {
-        const response = await fetch(`/chat/${token()}`).catch(() => null);
+        const response = await fetch(chat.show(token()).url).catch(() => null);
         if (!response?.ok) return;
         const data = await response.json();
         setMessages(data.messages ?? []);
@@ -91,7 +92,7 @@ export function ChatWidget() {
         setSending(true);
         setBody('');
 
-        const response = await fetch(`/chat/${token()}`, {
+        const response = await fetch(chat.store(token()).url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -127,7 +128,7 @@ export function ChatWidget() {
                     // control and not as another piece of site furniture. The
                     // label moves to aria-label, which is where a screen reader
                     // was getting it from anyway.
-                    className="press fixed right-5 bottom-5 z-50 flex size-14 items-center justify-center rounded-full bg-plum text-white shadow-lg ring-1 ring-plum-deep/10 hover:bg-plum-deep focus-visible:ring-2 focus-visible:ring-plum"
+                    className="press fixed right-5 bottom-5 z-50 flex size-14 items-center justify-center rounded-full bg-clay-deep text-white shadow-lg ring-1 ring-plum-deep/10 hover:bg-clay-ink focus-visible:ring-2 focus-visible:ring-plum"
                 >
                     <MessageCircle className="size-6" aria-hidden />
                 </button>
@@ -140,7 +141,7 @@ export function ChatWidget() {
                 // the coloured header is clipped by the radius instead of
                 // meeting it at a corner.
                 <div className="fixed right-4 bottom-4 z-50 flex max-h-[70vh] w-[min(22rem,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border border-border bg-background shadow-2xl">
-                    <div className="flex items-center justify-between bg-plum px-4 py-3 text-white">
+                    <div className="flex items-center justify-between rounded-md bg-clay-deep px-4 py-3 text-white">
                         <p className="text-sm font-medium">{greeting}</p>
                         <button
                             type="button"
@@ -183,7 +184,7 @@ export function ChatWidget() {
                                     <p
                                         className={
                                             staff
-                                                ? 'rounded-2xl rounded-br-sm bg-plum px-3 py-2 text-sm text-white'
+                                                ? 'rounded-2xl rounded-br-sm rounded-md bg-clay-deep px-3 py-2 text-sm text-white'
                                                 : 'rounded-2xl rounded-bl-sm bg-mist px-3 py-2 text-sm dark:bg-white/10'
                                         }
                                     >
@@ -245,7 +246,7 @@ export function ChatWidget() {
                             type="submit"
                             disabled={sending || !body.trim()}
                             aria-label="Send"
-                            className="bg-plum px-3 text-white disabled:opacity-50"
+                            className="rounded-md bg-clay-deep px-3 text-white disabled:opacity-50"
                         >
                             <Send className="size-4" aria-hidden />
                         </button>

@@ -71,7 +71,7 @@ export default function AppointmentsIndex({
                                                 : { date },
                                     }).url
                                 }
-                                className="press inline-flex h-10 items-center gap-2 bg-plum px-4 text-sm font-medium text-white hover:bg-plum-deep"
+                                className="press inline-flex h-10 items-center gap-2 bg-clay-deep px-4 text-sm font-medium text-white hover:bg-clay-ink"
                             >
                                 <Plus className="size-4" aria-hidden /> New
                                 appointment

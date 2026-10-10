@@ -124,18 +124,18 @@ export default function Book({
     ] as const;
 
     const field =
-        'mt-1.5 h-12 w-full border border-input bg-white px-4 focus:border-plum focus:outline-none';
+        'mt-1.5 h-12 w-full border border-input bg-white px-4 focus:border-clay-deep focus:outline-none';
 
     return (
         <>
             <Head title="Book a consultation" />
 
-            <section className="on-dark bg-plum gutter pt-14 pb-12 text-white ">
+            <section className="bg-blush gutter pt-14 pb-12 text-cocoa ">
                 <div className="mx-auto max-w-7xl">
                     <h1 className="text-5xl leading-[1.05] sm:text-6xl">
-                        Book your <em className="text-champagne">visit.</em>
+                        Book your <em className="text-clay-ink">visit.</em>
                     </h1>
-                    <p className="mt-4 max-w-xl text-lilac">
+                    <p className="mt-4 max-w-xl text-text">
                         No account needed. We confirm by SMS within the hour during
                         clinic hours.
                     </p>
@@ -289,8 +289,8 @@ export default function Book({
                                         className={cn(
                                             'press numerals flex h-16 flex-col items-center justify-center border text-xs',
                                             iso === data.date
-                                                ? 'border-plum bg-plum text-white'
-                                                : 'border-input hover:border-plum',
+                                                ? 'border-clay-deep bg-clay-deep text-white'
+                                                : 'border-input hover:border-clay-deep',
                                             closed &&
                                                 'cursor-not-allowed opacity-40 hover:border-input',
                                         )}
@@ -347,8 +347,8 @@ export default function Book({
                                             className={cn(
                                                 'press numerals flex h-16 items-baseline justify-center gap-1 border pt-4',
                                                 time === data.time
-                                                    ? 'border-plum bg-plum text-white'
-                                                    : 'border-input hover:border-plum',
+                                                    ? 'border-clay-deep bg-clay-deep text-white'
+                                                    : 'border-input hover:border-clay-deep',
                                             )}
                                         >
                                             <span className="font-display text-2xl">
@@ -495,7 +495,7 @@ export default function Book({
                     <div className="card-stock p-6 lg:sticky lg:top-28">
                         <div className="flex items-baseline justify-between">
                             <h2 className="text-2xl">Your appointment</h2>
-                            <span className="border border-dashed border-plum/40 px-2 py-0.5 text-xs text-plum">
+                            <span className="border border-dashed border-clay-deep/40 px-2 py-0.5 text-xs text-plum">
                                 Draft
                             </span>
                         </div>
@@ -512,7 +512,7 @@ export default function Book({
                                         aria-hidden="true"
                                         className={cn(
                                             'h-1.5 transition-colors duration-200',
-                                            done ? 'bg-plum' : 'bg-plum/15',
+                                            done ? 'bg-clay-deep' : 'bg-clay/25',
                                         )}
                                     />
                                     <span
@@ -583,7 +583,7 @@ export default function Book({
                         <button
                             type="submit"
                             disabled={form.processing || !data.time}
-                            className="press mt-6 h-13 w-full bg-plum font-medium text-white hover:bg-violet disabled:cursor-not-allowed disabled:opacity-50"
+                            className="press mt-6 h-13 w-full rounded-md bg-clay-deep font-medium text-white hover:bg-clay-ink disabled:cursor-not-allowed disabled:opacity-50"
                         >
                             {form.processing
                                 ? 'Booking...'
@@ -648,8 +648,8 @@ function Choice({
             className={cn(
                 'press relative border p-4 text-left',
                 selected
-                    ? 'border-plum bg-plum text-white'
-                    : 'border-input hover:border-plum',
+                    ? 'border-clay-deep bg-clay-deep text-white'
+                    : 'border-input hover:border-clay-deep',
             )}
         >
             {selected && (

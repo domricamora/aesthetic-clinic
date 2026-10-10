@@ -96,7 +96,7 @@ export default function InventoryAdjust({
                                     className={cn(
                                         'h-10 border px-3 text-left text-sm transition-colors duration-150 ease-out',
                                         form.data.kind === key
-                                            ? 'border-plum bg-plum text-white'
+                                            ? 'border-clay-deep bg-clay-deep text-white'
                                             : 'border-border bg-background hover:bg-mist dark:hover:bg-white/5',
                                     )}
                                 >
@@ -189,7 +189,7 @@ export default function InventoryAdjust({
                                             className={cn(
                                                 'h-10 border px-3 text-left text-sm transition-colors duration-150 ease-out',
                                                 form.data.mode === 'count'
-                                                    ? 'border-plum bg-plum text-white'
+                                                    ? 'border-clay-deep bg-clay-deep text-white'
                                                     : 'border-border bg-background hover:bg-mist dark:hover:bg-white/5',
                                             )}
                                         >
@@ -209,7 +209,7 @@ export default function InventoryAdjust({
                                             className={cn(
                                                 'h-10 border px-3 text-left text-sm transition-colors duration-150 ease-out',
                                                 form.data.mode === 'delta'
-                                                    ? 'border-plum bg-plum text-white'
+                                                    ? 'border-clay-deep bg-clay-deep text-white'
                                                     : 'border-border bg-background hover:bg-mist dark:hover:bg-white/5',
                                             )}
                                         >
@@ -297,7 +297,7 @@ export default function InventoryAdjust({
                     <Button
                         type="submit"
                         disabled={form.processing || !product}
-                        className="h-11 justify-self-start bg-plum text-white hover:bg-plum-deep"
+                        className="h-11 justify-self-start bg-clay-deep text-white hover:bg-clay-ink"
                     >
                         {form.processing && <Spinner />}
                         Record

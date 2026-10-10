@@ -144,7 +144,7 @@ export default function AppointmentCard({
                             aria-hidden="true"
                             className={cn(
                                 'h-1.5 transition-colors duration-200',
-                                step.done ? 'bg-plum' : 'bg-plum/15',
+                                step.done ? 'bg-clay-deep' : 'bg-clay/25',
                             )}
                         />
                         <span
@@ -176,7 +176,7 @@ export default function AppointmentCard({
                 onChange={(e) =>
                     setDraft({ treatment: Number(e.target.value) })
                 }
-                className="mt-1.5 h-12 w-full cursor-pointer border border-input bg-white px-3 text-base focus:border-plum focus:outline-none"
+                className="mt-1.5 h-12 w-full cursor-pointer border border-input bg-white px-3 text-base focus:border-clay-deep focus:outline-none"
             >
                 {treatments.map((t) => (
                     <option key={t.id} value={t.id}>
@@ -220,7 +220,7 @@ export default function AppointmentCard({
                                 'press h-11 text-sm',
                                 i > 0 && 'border-l border-input',
                                 b.id === branch.id
-                                    ? 'bg-plum text-white'
+                                    ? 'bg-clay-deep text-white'
                                     : 'hover:bg-mist',
                             )}
                         >
@@ -249,8 +249,8 @@ export default function AppointmentCard({
                                 className={cn(
                                     'press numerals flex h-14 flex-col items-center justify-center border text-xs',
                                     iso === date
-                                        ? 'border-plum bg-plum text-white'
-                                        : 'border-input hover:border-plum',
+                                        ? 'border-clay-deep bg-clay-deep text-white'
+                                        : 'border-input hover:border-clay-deep',
                                     closed &&
                                         'cursor-not-allowed opacity-40 hover:border-input',
                                 )}
@@ -298,7 +298,7 @@ export default function AppointmentCard({
                                 key={time}
                                 type="button"
                                 onClick={() => pick(time)}
-                                className="press numerals group flex h-14 items-baseline justify-center gap-1 border border-input hover:border-plum hover:bg-plum hover:text-white"
+                                className="press numerals group flex h-14 items-baseline justify-center gap-1 border border-input hover:border-clay-deep hover:bg-clay-deep hover:text-white"
                             >
                                 {/* The body sans at its normal weight, the same
                                     face as every other control in the box. It

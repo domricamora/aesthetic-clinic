@@ -98,7 +98,7 @@ export default function AccountingReports(props: Props) {
                             className={cn(
                                 'press h-10 border px-4 text-sm',
                                 tab === name
-                                    ? 'border-plum bg-lilac/60 text-plum'
+                                    ? 'border-clay-deep bg-lilac/60 text-plum'
                                     : 'border-border bg-background hover:bg-mist dark:hover:bg-white/5',
                             )}
                         >

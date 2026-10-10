@@ -78,7 +78,7 @@ export default function PayrollIndex({
                         <Button
                             type="button"
                             onClick={() => setOpen((v) => !v)}
-                            className="h-10 bg-plum text-white hover:bg-plum-deep"
+                            className="h-10 bg-clay-deep text-white hover:bg-clay-ink"
                         >
                             {open ? (
                                 <X className="h-4 w-4" />
@@ -172,7 +172,7 @@ export default function PayrollIndex({
                             <Button
                                 type="submit"
                                 disabled={form.processing}
-                                className="h-10 bg-plum text-white hover:bg-plum-deep"
+                                className="h-10 bg-clay-deep text-white hover:bg-clay-ink"
                             >
                                 {form.processing && <Spinner />}
                                 Calculate

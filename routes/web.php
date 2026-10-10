@@ -30,6 +30,7 @@ Route::get('membership', [PageController::class, 'membership'])->name('membershi
 Route::get('promotions', [PageController::class, 'promotions'])->name('promotions');
 Route::get('before-after', [PageController::class, 'beforeAfter'])->name('before-after');
 Route::get('contact', [PageController::class, 'contact'])->name('contact');
+Route::inertia('platform', 'platform')->name('platform');
 Route::get('journal', [BlogController::class, 'index'])->name('blog.index');
 Route::get('journal/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
@@ -78,10 +79,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
         // it is an enquiry and belongs in the same queue.
         Route::get('chat', [ChatController::class, 'index'])->middleware('can:leads.view')->name('chat.index');
         Route::get('chat/{conversation}', [ChatController::class, 'show'])->middleware('can:leads.view')->name('chat.show');
-// What the inbox and the sidebar menu re-read on a timer, so a message that
-// arrives while somebody is on another screen still shows up.
-Route::get('chat-feed', [ChatController::class, 'poll'])->middleware('can:leads.view')->name('chat.poll');
-Route::get('chat/{conversation}/messages', [ChatController::class, 'messages'])->middleware('can:leads.view')->name('chat.messages');
+        // What the inbox and the sidebar menu re-read on a timer, so a message that
+        // arrives while somebody is on another screen still shows up.
+        Route::get('chat-feed', [ChatController::class, 'poll'])->middleware('can:leads.view')->name('chat.poll');
+        Route::get('chat/{conversation}/messages', [ChatController::class, 'messages'])->middleware('can:leads.view')->name('chat.messages');
         Route::post('chat/{conversation}/reply', [ChatController::class, 'reply'])->middleware('can:leads.edit')->name('chat.reply');
         Route::post('chat/{conversation}/close', [ChatController::class, 'close'])->middleware('can:leads.edit')->name('chat.close');
 

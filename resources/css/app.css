@@ -357,14 +357,9 @@
         background: var(--color-rose-ink);
     }
 
+    /* The primary action stays clay on a dark field too, so it always leads. */
     .on-dark .btn-solid {
-        background: var(--color-champagne);
-        color: var(--color-plum-deep);
-        box-shadow: none;
-    }
-
-    .on-dark .btn-solid:hover {
-        background: #fff;
+        box-shadow: 0 8px 20px -10px rgb(0 0 0 / 0.5);
     }
 
     .btn-outline {

@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
             // branch should not have the demo name put back by a later seed.
             Branch::withoutGlobalScopes()->firstOrCreate(
                 ['organization_id' => $organization->id, 'slug' => $branch['slug']],
-                $branch + ['email' => $branch['slug'].'@aesthetic-clinic.test'],
+                $branch + ['email' => $branch['slug'].'@aesthetic-clinic.recursive-frog.com'],
             );
         }
 

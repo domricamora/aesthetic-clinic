@@ -28,7 +28,9 @@ export default function Home({ categories, featured, bookable, branches, testimo
     useReveal();
 
     const signature = featured.slice(0, 3);
-    const grid = (featured.length >= 6 ? featured : [...featured, ...bookable.filter((b) => !featured.some((f) => f.id === b.id))]).slice(0, 6);
+    // The grid starts after the three signature treatments, so nothing on the
+    // page is shown twice in a row.
+    const grid = [...featured.slice(3), ...bookable.filter((b) => !featured.some((f) => f.id === b.id))].slice(0, 6);
 
     return (
         <>
@@ -48,7 +50,7 @@ export default function Home({ categories, featured, bookable, branches, testimo
                 <HeroVideo className="[&_video]:object-[70%_center] [&_img]:object-[70%_center]" />
                 <div
                     aria-hidden="true"
-                    className="absolute inset-0 -z-10 bg-[linear-gradient(to_top,rgb(42_30_28/0.82),rgb(42_30_28/0.25)_60%,rgb(42_30_28/0.1))] lg:bg-[linear-gradient(to_right,rgb(42_30_28/0.78),rgb(42_30_28/0.42)_42%,rgb(42_30_28/0)_72%)]"
+                    className="absolute inset-0 -z-10 bg-[linear-gradient(to_top,rgb(42_30_28/0.82),rgb(42_30_28/0.25)_60%,rgb(42_30_28/0.1))] lg:bg-[linear-gradient(to_right,rgb(42_30_28/0.84),rgb(42_30_28/0.66)_45%,rgb(42_30_28/0.18)_68%,rgb(42_30_28/0)_82%)]"
                 />
                 <div className="gutter w-full pt-24 pb-28 lg:pb-32">
                     <div className="hero-rise max-w-[46rem]">
@@ -92,8 +94,8 @@ export default function Home({ categories, featured, bookable, branches, testimo
                                         i === 1 && 'shadow-lift',
                                     )}
                                 >
-                                    <span className="text-[0.75rem] tracking-[0.16em] text-clay-ink uppercase">{t.category?.name}</span>
-                                    <h2 className="mt-3 text-[1.75rem] leading-tight text-cocoa uppercase">{t.name}</h2>
+                                    <h2 className="text-[1.75rem] leading-tight text-cocoa uppercase">{t.name}</h2>
+                                    <span className="mt-1.5 text-[0.9375rem] text-clay-ink">{t.category?.name}</span>
                                     {t.image && (
                                         <img
                                             src={t.image}
@@ -140,7 +142,7 @@ export default function Home({ categories, featured, bookable, branches, testimo
                                     {t.name}
                                 </Link>
                             </h3>
-                            <p className="mt-2 line-clamp-2 text-[0.9375rem] text-text">{t.summary}</p>
+                            <p className="mt-2 line-clamp-2 min-h-[2.9em] text-[0.9375rem] text-text">{t.summary}</p>
                             <div className="mt-5 flex items-center justify-between gap-4 border-t border-border pt-4">
                                 <p className="numerals">
                                     <span className="font-display text-2xl text-cocoa">{price(t)}</span>
@@ -192,8 +194,8 @@ export default function Home({ categories, featured, bookable, branches, testimo
             <section className="gutter grid items-center gap-14 py-20 lg:grid-cols-2 lg:gap-20 lg:py-28">
                 <div className="relative pr-10 pb-16 sm:pr-24">
                     <img
-                        src={media('doctor-consult.jpg')}
-                        alt="A doctor talking a patient through her treatment plan"
+                        src={media('doctor-sofia.jpg')}
+                        alt="Dr. Sofia Reyes, the clinic's medical director"
                         loading="lazy"
                         className="aspect-[4/5] w-full rounded-xl object-cover"
                     />
@@ -279,8 +281,8 @@ export default function Home({ categories, featured, bookable, branches, testimo
                         More examples <ArrowRight className="size-4" aria-hidden="true" />
                     </Link>
                 </div>
-                <div className="overflow-hidden rounded-xl lg:col-span-7">
-                    <BeforeAfter src={media('booster.jpg')} alt="Illustrative portrait showing skin texture before and after a hydration treatment" />
+                <div className="lg:col-span-7">
+                    <BeforeAfter before={media('ba-before.jpg')} after={media('ba-after.jpg')} alt="Illustrative portrait showing duller, uneven skin before and brighter, even skin after a skin booster plan" />
                 </div>
             </section>
 

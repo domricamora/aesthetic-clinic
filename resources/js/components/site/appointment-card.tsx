@@ -88,9 +88,11 @@ export default function AppointmentCard({
     }
 
     const steps = [
-        { label: 'Treatment', done: draft.treatment !== undefined },
-        { label: 'Branch', done: draft.branch !== undefined },
-        { label: 'Day', done: draft.date !== undefined },
+        // Treatment, branch and day always hold a value (a default is shown
+        // selected), so they read as chosen; only the time is still to pick.
+        { label: 'Treatment', done: true },
+        { label: 'Branch', done: true },
+        { label: 'Day', done: true },
         { label: 'Time', done: false },
     ];
 
@@ -124,18 +126,12 @@ export default function AppointmentCard({
             */}
             <div
                 className={cn(
-                    wide && 'grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-12',
+                    wide && 'grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-12',
                 )}
             >
                 <div className={cn(wide && 'min-w-0')}>
-                    <div className="flex items-center justify-between gap-4">
-                        <span className="text-xs tracking-[0.18em] text-muted-foreground uppercase">
-                            Draft
-                        </span>
-                    </div>
-
             <ol
-                className="mt-5 grid grid-cols-4 gap-2"
+                className="grid grid-cols-4 gap-2"
                 aria-label="Booking progress"
             >
                 {steps.map((step) => (
@@ -205,7 +201,7 @@ export default function AppointmentCard({
                 </div>
 
                 <div className={cn(wide && 'min-w-0')}>
-            <fieldset className="mt-5">
+            <fieldset className={wide ? '' : 'mt-5'}>
                 <legend className="text-xs tracking-[0.14em] text-muted-foreground uppercase">
                     Branch
                 </legend>
@@ -298,17 +294,15 @@ export default function AppointmentCard({
                                 key={time}
                                 type="button"
                                 onClick={() => pick(time)}
-                                className="press numerals group flex h-14 items-baseline justify-center gap-1 border border-input hover:border-clay-deep hover:bg-clay-deep hover:text-white"
+                                className="press numerals group flex h-14 items-center justify-center border border-input hover:border-clay-deep hover:bg-clay-deep hover:text-white"
                             >
                                 {/* The body sans at its normal weight, the same
                                     face as every other control in the box. It
                                     was the display serif at semibold, which
                                     read as louder than the heading above it. */}
-                                <span className="font-sans text-lg">
-                                    {clock}
-                                </span>
-                                <span className="text-[11px] text-muted-foreground group-hover:text-white/80">
-                                    {meridiem}
+                                <span className="flex items-baseline gap-1">
+                                    <span className="font-sans text-lg">{clock}</span>
+                                    <span className="text-[11px] text-muted-foreground group-hover:text-white/80">{meridiem}</span>
                                 </span>
                             </button>
                         );

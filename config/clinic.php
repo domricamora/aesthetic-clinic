@@ -14,7 +14,7 @@ return [
     'organization' => env('CLINIC_ORGANIZATION', 'aesthetic-clinic'),
 
     'name' => env('CLINIC_NAME', 'Aesthetic Clinic'),
-    'short_name' => env('CLINIC_SHORT_NAME', 'Aesthetic'),
+    'short_name' => env('CLINIC_SHORT_NAME', 'aesthetic-clinic'),
     'tagline' => env('CLINIC_TAGLINE', 'Beauty that enhances who you already are.'),
 
     /*
@@ -56,8 +56,8 @@ return [
 
     'contact' => [
         'address' => env('CLINIC_ADDRESS', '28 Amorsolo Street, Legaspi Village, Makati City'),
-        'phone' => env('CLINIC_PHONE', '0917 177 7201'),
-        'email' => env('CLINIC_EMAIL', 'hello@aesthetic-clinic.test'),
+        'phone' => env('CLINIC_PHONE', '+63 2 8555 0100'),
+        'email' => env('CLINIC_EMAIL', 'demo@aesthetic-clinic.recursive-frog.com'),
     ],
 
     'social' => [

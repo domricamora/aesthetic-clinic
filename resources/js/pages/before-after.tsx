@@ -65,7 +65,7 @@ export default function BeforeAfterPage({ cases }: { cases: CompareCase[] }) {
                         >
                             {item.image && (
                                 <BeforeAfter
-                                    src={item.image}
+                                    after={item.image}
                                     alt={`Portrait used to illustrate ${item.name.toLowerCase()} in this demo`}
                                 />
                             )}

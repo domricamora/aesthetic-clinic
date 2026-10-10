@@ -66,6 +66,9 @@ class DatabaseSeeder extends Seeder
 
         // Tests build their own leads and appointments.
         if (! app()->runningUnitTests()) {
+            // A year of history first; the CRM seeder then fills today and this week
+            // around it, checking the diary for each slot.
+            $this->call(ShowcaseHistorySeeder::class);
             $this->call(CrmDemoSeeder::class);
         }
     }

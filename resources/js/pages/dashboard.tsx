@@ -99,7 +99,7 @@ export default function Dashboard({
                         {can('appointments.create') && (
                             <Link
                                 href={appointments.create().url}
-                                className="press inline-flex items-center gap-2 bg-clay-deep px-4 py-2 text-sm font-medium text-white hover:bg-clay-ink"
+                                className="press inline-flex items-center gap-2 rounded-md bg-clay-deep px-4 py-2 text-sm font-medium text-white hover:bg-clay-ink"
                             >
                                 <CalendarPlus className="size-4" aria-hidden />{' '}
                                 New appointment
@@ -108,7 +108,7 @@ export default function Dashboard({
                         {can('leads.create') && (
                             <Link
                                 href={leads.create().url}
-                                className="press inline-flex items-center gap-2 border border-clay-deep px-4 py-2 text-sm font-medium text-plum hover:bg-lilac/50 dark:border-lilac dark:text-lilac"
+                                className="press inline-flex items-center gap-2 rounded-md border border-clay-deep px-4 py-2 text-sm font-medium text-plum hover:bg-lilac/50 dark:border-lilac dark:text-lilac"
                             >
                                 <UserPlus className="size-4" aria-hidden /> Add
                                 lead
@@ -118,7 +118,7 @@ export default function Dashboard({
                             href={book().url}
                             target="_blank"
                             rel="noreferrer"
-                            className="border border-clay-deep px-4 py-2 text-sm font-medium text-plum transition-colors duration-150 ease-out hover:bg-clay-deep hover:text-white dark:border-lilac dark:text-lilac"
+                            className="rounded-md border border-clay-deep px-4 py-2 text-sm font-medium text-plum transition-colors duration-150 ease-out hover:bg-clay-deep hover:text-white dark:border-lilac dark:text-lilac"
                         >
                             Open public booking page
                         </a>
@@ -260,7 +260,7 @@ export default function Dashboard({
                             {can('settings.edit') && (
                                 <Link
                                     href={setup.index().url}
-                                    className="press inline-flex items-center gap-2 border border-border px-4 py-2 text-sm font-medium transition-colors duration-150 ease-out hover:bg-mist dark:hover:bg-white/5"
+                                    className="press inline-flex items-center gap-2 rounded-md border border-border px-4 py-2 text-sm font-medium transition-colors duration-150 ease-out hover:bg-mist dark:hover:bg-white/5"
                                 >
                                     Manage clinic data
                                 </Link>

@@ -89,7 +89,10 @@ it('takes refunds out of the revenue the graph shows', function () {
         'sale_id' => $sale->id,
         'method' => 'card',
         'type' => 'refund',
-        'amount' => $refund,
+        // Signed as the till signs it (RingUpSale::recordPayment). This test
+        // used to insert a positive refund, which hid that the analytics were
+        // adding real, negative refunds back onto revenue.
+        'amount' => -$refund,
         'user_id' => till()->id,
         'paid_at' => now(),
     ]);

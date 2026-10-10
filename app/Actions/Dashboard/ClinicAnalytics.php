@@ -282,7 +282,7 @@ class ClinicAnalytics
         foreach (Payment::where('type', 'refund')->where('paid_at', '>=', $start)->get(['paid_at', 'amount']) as $refund) {
             $key = $refund->paid_at->format('Y-m');
             if (isset($months[$key])) {
-                $months[$key]['revenue'] -= (float) $refund->amount;
+                $months[$key]['revenue'] -= abs((float) $refund->amount);
             }
         }
 
@@ -342,7 +342,7 @@ class ClinicAnalytics
         $refunds = (float) Payment::where('type', 'refund')
             ->where('paid_at', '>=', $from)
             ->when($until, fn ($q) => $q->where('paid_at', '<', $until))
-            ->sum('amount');
+            ->sum(DB::raw('ABS(amount)'));
 
         return [(float) $row->revenue, $refunds, (float) $row->discount];
     }
@@ -424,7 +424,7 @@ class ClinicAnalytics
         foreach ($refunds as $date => $rows) {
             if (isset($keys[$date])) {
                 $keys[$date]['revenue'] = round(
-                    $keys[$date]['revenue'] - (float) $rows->sum('amount'),
+                    $keys[$date]['revenue'] - (float) $rows->sum(fn (Payment $p) => abs((float) $p->amount)),
                     2,
                 );
             }
@@ -540,7 +540,7 @@ class ClinicAnalytics
                 'count' => 0,
             ];
 
-            $mix[$method]['amount'] += ($row->type === 'refund' ? -1 : 1) * (float) $row->amount;
+            $mix[$method]['amount'] += ($row->type === 'refund' ? -1 : 1) * abs((float) $row->amount);
             $mix[$method]['count'] += (int) $row->count;
         }
 

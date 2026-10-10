@@ -18,12 +18,14 @@ admin@aesthetic-clinic.test (Super Admin), owner@aesthetic-clinic.test, receptio
 ## Progress
 
 - [x] Phase 0: fork, detach, rebrand strings, deploy guard retargeted (`scripts/deploy.ps1` derives `https://<slug>.recursive-frog.com` from `config/clinic.php` slug `aesthetic-clinic`), 241 tests green.
-- [ ] Phase 1: brand and design system (mockup look, soft 8px corners, serif display + Geist)
-- [ ] Phase 2: Asian photos + hero video
-- [ ] Phase 3: marketing site redesign + recursive-frog showcase layer
-- [ ] Phase 4: admin theme + KPI dashboard
-- [ ] Phase 5: 12-month showcase seed data
-- [ ] Phase 6: QA, deploy, hand-off
+- [x] Phase 1: tokens in `resources/css/app.css` (rose canvas, blush, clay `#A4604F` actions, cocoa ink, 10px radius, Gilda Display + Geist), SVG mark `components/brand-mark.tsx` + favicons from `php scripts/build-mark.php`.
+- [x] Phase 2: 38 Unsplash photos of Asian practitioners/patients (`public/media/photos/credits.json`), hero loop `public/media/video/hero-clinic.mp4` cut from four Pexels clinic clips (`CREDITS.md`).
+- [x] Phase 3: new `site-layout.tsx` (recursive-frog showcase strip, header, footer credit), `home.tsx` on the mockup, `platform.tsx` (`/platform`, demo logins), all public page heroes light, plum fills moved to clay. Fixed chat widget root-relative fetches.
+- [x] Phase 4: admin re-themed by tokens; dashboard KPI panel `components/admin/analytics-panel.tsx` + SVG charts `components/admin/charts.tsx`; `ClinicAnalytics` gained patients, utilisation, branches, categories, practitioners, funnel, sources, monthly. Fixed previous-period bound and the refund sign bug. Platform screenshots in `public/media/photos/platform-*.jpg` (re-capture after visual changes).
+- [x] Phase 5: `ShowcaseHistorySeeder` (a year through the real actions, ~2.5 min).
+- [ ] Phase 6: login page demo logins + auth/settings polish, mobile QA, impeccable finish review + DESIGN.md, deploy.
+
+Tests: 247 (6 new analytics tests). Last full run green before the analytics work; POS + analytics files green after.
 
 ## Commands
 

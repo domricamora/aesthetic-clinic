@@ -1,4 +1,4 @@
-import { Form, Head } from '@inertiajs/react';
+import { Form, Head, router, usePage } from '@inertiajs/react';
 import InputError from '@/components/input-error';
 import PasswordInput from '@/components/password-input';
 import TextLink from '@/components/text-link';
@@ -18,7 +18,16 @@ type Props = {
     canResetPassword: boolean;
 };
 
+/** The showcase logins, one click each. Every demo account uses the password "password". */
+const DEMO: [string, string, string][] = [
+    ['Owner', 'owner@aesthetic-clinic.test', 'Dashboard, money, stock and people'],
+    ['Front desk', 'reception@aesthetic-clinic.test', 'Agenda, leads, chat and the till'],
+    ['Super admin', 'admin@aesthetic-clinic.test', 'Everything, settings included'],
+];
+
 export default function Login({ status, canResetPassword }: Props) {
+    const prefill = new URLSearchParams(usePage().url.split('?')[1] ?? '').get('email') ?? '';
+
     return (
         <>
             <Head title="Log in" />
@@ -50,6 +59,7 @@ export default function Login({ status, canResetPassword }: Props) {
                                     autoFocus
                                     tabIndex={1}
                                     autoComplete="email"
+                                    defaultValue={prefill}
                                     placeholder="email@example.com"
                                 />
                                 <InputError message={errors.email} />
@@ -100,6 +110,30 @@ export default function Login({ status, canResetPassword }: Props) {
                             </Button>
                         </div>
 
+                        <section aria-labelledby="demo-heading" className="rounded-lg border border-border bg-soft-rose p-4">
+                            <h2 id="demo-heading" className="text-sm font-medium">
+                                Exploring the demo? Sign in as
+                            </h2>
+                            <ul className="mt-3 grid gap-2">
+                                {DEMO.map(([role, email, sees]) => (
+                                    <li key={email}>
+                                        <button
+                                            type="button"
+                                            disabled={processing}
+                                            onClick={() => router.post(store.url(), { email, password: 'password', remember: true })}
+                                            className="press flex w-full items-center justify-between gap-3 rounded-md border border-border bg-card px-3 py-2.5 text-left transition-colors hover:border-clay disabled:opacity-50"
+                                        >
+                                            <span>
+                                                <span className="block text-sm font-medium">{role}</span>
+                                                <span className="block text-xs text-muted-foreground">{sees}</span>
+                                            </span>
+                                            <span className="text-xs text-clay-ink">Sign in</span>
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+
                         <div className="text-center text-sm text-muted-foreground">
                             Don't have an account?{' '}
                             <TextLink href={register()} tabIndex={5}>
@@ -120,6 +154,6 @@ export default function Login({ status, canResetPassword }: Props) {
 }
 
 Login.layout = {
-    title: 'Log in to your account',
-    description: 'Enter your email and password below to log in',
+    title: 'Welcome back',
+    description: 'Sign in to the clinic desk.',
 };

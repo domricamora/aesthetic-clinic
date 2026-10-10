@@ -13,14 +13,10 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
             refresh: true,
             fonts: [
-                bunny('Pinyon Script', {
+                bunny('Gilda Display', {
                     weights: [400],
                 }),
-                bunny('Bodoni Moda', {
-                    weights: [400, 500, 600],
-                    styles: ['normal', 'italic'],
-                }),
-                bunny('Jost', {
+                bunny('Geist', {
                     weights: [400, 500, 600],
                 }),
             ],

@@ -1,12 +1,12 @@
 # Hero video credits
 
-Free stock footage from Pexels (https://www.pexels.com), used under the
-Pexels License. Clips are trimmed to 8 seconds, scaled to 1280x720, audio
-removed and re-encoded for the web. Every clip features an Asian model.
+`hero-clinic.mp4` is one 21.6 second loop edited from four free Pexels clips,
+used under the Pexels License (https://www.pexels.com/license/). Each clip
+shows an Asian patient in a clinic treatment room. Clips were trimmed to six
+seconds, crossfaded, scaled to 1280x720, lightly warm-graded, audio removed
+and re-encoded for the web. `hero-clinic.jpg` is its first-second still.
 
-- hero-5308682.mp4: Anna Tarazevich, https://www.pexels.com/video/5308682/
-  (towel-wrap skincare, eyes closed)
-- hero-5308683.mp4: Anna Tarazevich, https://www.pexels.com/video/5308683/
-  (applying cream to the cheeks, same set as above)
-- hero-12322630.mp4: RDNE Stock project, https://www.pexels.com/video/12322630/
-  (headband and prep routine in a bright room)
+1. https://www.pexels.com/video/13467956/ (facial cleansing by a gloved practitioner)
+2. https://www.pexels.com/video/5524244/ (practitioner applying a facial treatment)
+3. https://www.pexels.com/video/7581433/ (facial care treatment, RDNE Stock project)
+4. https://www.pexels.com/video/37437969/ (professional eyebrow grooming)

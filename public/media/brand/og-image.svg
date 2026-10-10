@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Aesthetic Clinic SaaS Platform</title>
+  <desc id="description">One system for the whole clinic, built by recursive-frog.com.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFDFC"/>
+      <stop offset="1" stop-color="#F8EEEA"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#3B2A28" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#paper)"/>
+  <circle cx="1115" cy="16" r="266" fill="#F2E3DD" opacity=".58"/>
+  <circle cx="1133" cy="619" r="193" fill="#E6C2B3" opacity=".26"/>
+
+  <g transform="translate(72 64)">
+    <rect width="52" height="52" rx="10" fill="#A4604F"/>
+    <g fill="none" stroke="#FBF6F3" stroke-width="2.8" stroke-linecap="round">
+      <path d="M13 36Q19 19 39 14"/>
+      <path d="M18 39Q24 26 39 21"/>
+      <path d="M23 42Q29 33 39 28"/>
+    </g>
+  </g>
+  <text x="140" y="86" fill="#3B2A28" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2.6">AESTHETIC CLINIC</text>
+  <text x="140" y="109" fill="#8E4E3F" font-family="Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="2.1">CLINIC MANAGEMENT PLATFORM</text>
+
+  <text x="72" y="238" fill="#3B2A28" font-family="Georgia, 'Times New Roman', serif" font-size="67" letter-spacing="-1.6">One system for</text>
+  <text x="72" y="318" fill="#3B2A28" font-family="Georgia, 'Times New Roman', serif" font-size="67" letter-spacing="-1.6">the whole clinic.</text>
+  <text x="75" y="374" fill="#5C4844" font-family="Arial, sans-serif" font-size="21">Booking, CRM, point of sale, inventory,</text>
+  <text x="75" y="405" fill="#5C4844" font-family="Arial, sans-serif" font-size="21">accounting, HR and payroll.</text>
+
+  <rect x="72" y="458" width="242" height="40" rx="20" fill="#F2E3DD"/>
+  <circle cx="92" cy="478" r="4" fill="#A4604F"/>
+  <text x="106" y="483" fill="#8E4E3F" font-family="Arial, sans-serif" font-size="13" font-weight="600" letter-spacing=".35">A LIVE PRODUCT SHOWCASE</text>
+  <path d="M72 545H644" stroke="#ECDCD5" stroke-width="1"/>
+  <text x="72" y="574" fill="#7A6460" font-family="Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="1.2">BUILT BY RECURSIVE-FROG.COM</text>
+  <text x="644" y="574" fill="#7A6460" font-family="Arial, sans-serif" font-size="12" text-anchor="end">PHILIPPINES · WEB PLATFORM</text>
+
+  <g filter="url(#shadow)">
+    <rect x="702" y="57" width="428" height="516" rx="14" fill="#FFFFFF"/>
+    <rect x="702.5" y="57.5" width="427" height="515" rx="13.5" fill="none" stroke="#ECDCD5"/>
+  </g>
+  <g>
+    <rect x="728" y="83" width="31" height="31" rx="7" fill="#A4604F"/>
+    <g fill="none" stroke="#FBF6F3" stroke-width="1.8" stroke-linecap="round">
+      <path d="M736 104Q740 93 752 90"/>
+      <path d="M739 106Q743 98 752 95"/>
+      <path d="M742 108Q746 102 752 100"/>
+    </g>
+    <text x="772" y="97" fill="#3B2A28" font-family="Arial, sans-serif" font-size="14" font-weight="700">Clinic overview</text>
+    <text x="772" y="113" fill="#7A6460" font-family="Arial, sans-serif" font-size="10">LIVE DEMO ENVIRONMENT</text>
+    <rect x="1032" y="86" width="70" height="23" rx="11.5" fill="#F8EEEA"/>
+    <circle cx="1045" cy="97.5" r="3" fill="#A4604F"/>
+    <text x="1053" y="101" fill="#8E4E3F" font-family="Arial, sans-serif" font-size="9" font-weight="700" letter-spacing=".8">OVERVIEW</text>
+
+    <rect x="728" y="137" width="190" height="96" rx="8" fill="#FBF6F3"/>
+    <text x="745" y="161" fill="#7A6460" font-family="Arial, sans-serif" font-size="11">Revenue · 30 days</text>
+    <text x="745" y="197" fill="#3B2A28" font-family="Georgia, 'Times New Roman', serif" font-size="29">₱2,110,124</text>
+    <path d="M745 216H899" stroke="#ECDCD5"/>
+
+    <rect x="929" y="137" width="173" height="96" rx="8" fill="#FBF6F3"/>
+    <text x="946" y="161" fill="#7A6460" font-family="Arial, sans-serif" font-size="11">Patients seen</text>
+    <text x="946" y="197" fill="#3B2A28" font-family="Georgia, 'Times New Roman', serif" font-size="29">375</text>
+    <path d="M946 216H1083" stroke="#ECDCD5"/>
+
+    <text x="728" y="268" fill="#3B2A28" font-family="Arial, sans-serif" font-size="12" font-weight="700">Clinic performance</text>
+    <text x="1102" y="268" fill="#7A6460" font-family="Arial, sans-serif" font-size="10" text-anchor="end">30 DAYS</text>
+    <path d="M728 355H1102M728 324H1102M728 293H1102" stroke="#F0E5E0" stroke-width="1"/>
+    <path d="M741 341L788 326L835 333L882 303L929 313L976 288L1023 300L1084 278" fill="none" stroke="#A4604F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#FFFFFF" stroke="#A4604F" stroke-width="2">
+      <circle cx="741" cy="341" r="4"/><circle cx="788" cy="326" r="4"/>
+      <circle cx="835" cy="333" r="4"/><circle cx="882" cy="303" r="4"/>
+      <circle cx="929" cy="313" r="4"/><circle cx="976" cy="288" r="4"/>
+      <circle cx="1023" cy="300" r="4"/><circle cx="1084" cy="278" r="4"/>
+    </g>
+
+    <path d="M728 380H1102" stroke="#ECDCD5"/>
+    <text x="728" y="408" fill="#7A6460" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="1">ONE CONNECTED WORKFLOW</text>
+
+    <g font-family="Arial, sans-serif" font-size="12" fill="#3B2A28">
+      <rect x="728" y="427" width="177" height="48" rx="8" fill="#FFFDFC" stroke="#ECDCD5"/>
+      <circle cx="748" cy="451" r="8" fill="#F2E3DD"/>
+      <path d="M745 451H751M748 448V454" stroke="#8E4E3F" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="765" y="455" font-weight="600">Online booking</text>
+
+      <rect x="922" y="427" width="180" height="48" rx="8" fill="#FFFDFC" stroke="#ECDCD5"/>
+      <circle cx="942" cy="451" r="8" fill="#F2E3DD"/>
+      <path d="M939 449H945M939 452H944" stroke="#8E4E3F" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="959" y="455" font-weight="600">Leads &amp; CRM</text>
+
+      <rect x="728" y="486" width="177" height="48" rx="8" fill="#FFFDFC" stroke="#ECDCD5"/>
+      <circle cx="748" cy="510" r="8" fill="#F2E3DD"/>
+      <path d="M744 510H752M748 506V514" stroke="#8E4E3F" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="765" y="514" font-weight="600">Stock &amp; sales</text>
+
+      <rect x="922" y="486" width="180" height="48" rx="8" fill="#FFFDFC" stroke="#ECDCD5"/>
+      <circle cx="942" cy="510" r="8" fill="#F2E3DD"/>
+      <path d="M939 507H945V513H939Z" fill="none" stroke="#8E4E3F" stroke-width="1.3"/>
+      <text x="959" y="514" font-weight="600">Books &amp; payroll</text>
+    </g>
+  </g>
+</svg>

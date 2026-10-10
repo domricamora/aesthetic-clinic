@@ -78,6 +78,7 @@ it('serves the sitemap and keeps the admin out of the index', function () {
     $this->get('/sitemap.xml')->assertOk()
         ->assertHeader('Content-Type', 'application/xml; charset=UTF-8')
         ->assertSee('<loc>', false)
+        ->assertSee(route('platform'), false)
         ->assertSee('treatments/hydra-facial', false)
         ->assertSee('journal/choosing-your-first-facial', false)
         ->assertSee('privacy-policy', false)
@@ -85,7 +86,27 @@ it('serves the sitemap and keeps the admin out of the index', function () {
 
     $this->get('/robots.txt')->assertOk()
         ->assertSee('Disallow: /admin', false)
+        ->assertSee('AI-readable product summary: '.route('llms'), false)
         ->assertSee('Sitemap: '.route('sitemap'), false);
+});
+
+it('publishes social metadata and software facts for search and AI crawlers', function () {
+    $this->get('/platform')->assertOk()
+        ->assertSee('name="description"', false)
+        ->assertSee('property="og:title"', false)
+        ->assertSee('property="og:description"', false)
+        ->assertSee('property="og:image" content="'.asset('media/brand/og-image.png').'"', false)
+        ->assertSee('property="og:image:width" content="1200"', false)
+        ->assertSee('name="twitter:card" content="summary_large_image"', false)
+        ->assertSee('rel="canonical" href="'.route('platform').'"', false)
+        ->assertSee('"@type":"SoftwareApplication"', false);
+
+    $this->get('/llms.txt')->assertOk()
+        ->assertHeader('Content-Type', 'text/plain; charset=UTF-8')
+        ->assertSee('# Aesthetic Clinic SaaS Platform', false)
+        ->assertSee(route('platform'), false)
+        ->assertSee('fictional showcase tenant', false)
+        ->assertSee('recursive-frog.com', false);
 });
 
 it('shows only the staff the office has ticked for the website', function () {

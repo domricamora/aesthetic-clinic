@@ -15,6 +15,7 @@ class SeoController extends Controller
     {
         $urls = collect([
             ['loc' => route('home'), 'priority' => '1.0'],
+            ['loc' => route('platform'), 'priority' => '0.9'],
             ['loc' => route('treatments.index'), 'priority' => '0.9'],
             ['loc' => route('book'), 'priority' => '0.9'],
             ['loc' => route('about'), 'priority' => '0.7'],
@@ -48,10 +49,25 @@ class SeoController extends Controller
             'Disallow: /settings',
             'Disallow: /book/confirmed',
             '',
+            '# AI-readable product summary: '.route('llms'),
             'Sitemap: '.route('sitemap'),
         ];
 
         return response(implode("\n", $lines)."\n")
+            ->header('Content-Type', 'text/plain; charset=UTF-8');
+    }
+
+    public function llms(): Response
+    {
+        return response()
+            ->view('llms', [
+                'homeUrl' => route('home'),
+                'platformUrl' => route('platform'),
+                'treatmentsUrl' => route('treatments.index'),
+                'bookingUrl' => route('book'),
+                'journalUrl' => route('blog.index'),
+                'privacyUrl' => route('legal.privacy'),
+            ])
             ->header('Content-Type', 'text/plain; charset=UTF-8');
     }
 }

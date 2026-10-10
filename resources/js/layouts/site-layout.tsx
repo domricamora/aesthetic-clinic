@@ -46,7 +46,6 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
 
     return (
         <div className="site theme-light min-h-dvh bg-background text-foreground">
-            <LocalBusinessSchema />
             <a
                 href="#main"
                 className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2"
@@ -180,56 +179,6 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                 </div>
             )}
         </div>
-    );
-}
-
-function LocalBusinessSchema() {
-    const { clinic } = usePage().props;
-    const schema = {
-        '@context': 'https://schema.org',
-        '@type': 'MedicalBusiness',
-        name: clinic.name,
-        description: `${clinic.tagline} Physician-led aesthetic and wellness clinic.`,
-        url: home().url,
-        telephone: clinic.contact.phone,
-        email: clinic.contact.email,
-        priceRange: '$$',
-        currenciesAccepted: 'PHP',
-        paymentAccepted: 'Cash, GCash, Maya, bank transfer, credit card',
-        address: {
-            '@type': 'PostalAddress',
-            streetAddress: clinic.contact.address,
-            addressCountry: 'PH',
-        },
-        openingHoursSpecification: [
-            {
-                '@type': 'OpeningHoursSpecification',
-                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-                opens: '10:00',
-                closes: '20:00',
-            },
-            {
-                '@type': 'OpeningHoursSpecification',
-                dayOfWeek: ['Saturday'],
-                opens: '10:00',
-                closes: '18:00',
-            },
-        ],
-        medicalSpecialty: ['Dermatology', 'Cosmetic surgery'],
-        availableService: [
-            { '@type': 'MedicalProcedure', name: 'Facial treatments' },
-            { '@type': 'MedicalProcedure', name: 'Injectables' },
-            { '@type': 'MedicalProcedure', name: 'Body contouring' },
-            { '@type': 'MedicalProcedure', name: 'Hair and scalp care' },
-        ],
-    };
-
-    return (
-        <script
-            type="application/ld+json"
-            // Structured data for search engines; the payload is built from config.
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
     );
 }
 

@@ -1,6 +1,6 @@
 # SESSION_STATE.md — HAND-OFF, START HERE
 
-Updated 2026-10-10.
+Updated 2026-10-10 (session saved after the live deploy; owner signed off "great job"). Live is at commit b2b5cfa, deployed with scripts/deploy.ps1; backups in ~/backups/*-aesthetic-clinic-20261010-113637.*
 
 ## What this is
 
@@ -57,3 +57,7 @@ Tests: 247 passing (1427 assertions).
 - Never hard-code a root-relative URL; use Wayfinder, `url()` or `Vite::asset()`.
 - PHPStan has 11 pre-existing errors in older files; do not claim it passes.
 - Browser QA: `playwright-core` in the session scratchpad + `~/AppData/Local/ms-playwright/chromium-1234/chrome-win64/chrome.exe`.
+
+## Next session
+
+Nothing is in flight. Pick from Open items above on request. If the GateGuard hook keeps asking for justifications on every first edit, the owner can add `C:/wamp64/www/beautyclinic/**` to `GATEGUARD_EXEMPT_GLOBS`.

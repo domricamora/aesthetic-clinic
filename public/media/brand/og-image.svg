@@ -14,14 +14,11 @@
   <circle cx="1115" cy="16" r="266" fill="#F2E3DD" opacity=".58"/>
   <circle cx="1133" cy="619" r="193" fill="#E6C2B3" opacity=".26"/>
 
-  <g transform="translate(72 64)">
-    <rect width="52" height="52" rx="10" fill="#A4604F"/>
-    <g fill="none" stroke="#FBF6F3" stroke-width="2.8" stroke-linecap="round">
-      <path d="M13 36Q19 19 39 14"/>
-      <path d="M18 39Q24 26 39 21"/>
-      <path d="M23 42Q29 33 39 28"/>
-    </g>
-  </g>
+  <svg x="72" y="64" width="52" height="52" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="15" fill="#A4604F"/>
+    <circle cx="30" cy="38.5" r="8.8" fill="none" stroke="#FBF6F3" stroke-width="4.4"/>
+    <path fill="#FBF6F3" d="M17 19.5Q42.2 14 42.2 31L42.2 42Q42.2 47 46 48Q38.5 50 37.2 44L37.2 31Q37.2 20 17 19.5Z"/>
+  </svg>
   <text x="140" y="86" fill="#3B2A28" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2.6">AESTHETIC CLINIC</text>
   <text x="140" y="109" fill="#8E4E3F" font-family="Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="2.1">SAAS PLATFORM · LIVE DEMO</text>
 
@@ -42,12 +39,11 @@
     <rect x="702.5" y="57.5" width="427" height="515" rx="13.5" fill="none" stroke="#ECDCD5"/>
   </g>
   <g>
-    <rect x="728" y="83" width="31" height="31" rx="7" fill="#A4604F"/>
-    <g fill="none" stroke="#FBF6F3" stroke-width="1.8" stroke-linecap="round">
-      <path d="M736 104Q740 93 752 90"/>
-      <path d="M739 106Q743 98 752 95"/>
-      <path d="M742 108Q746 102 752 100"/>
-    </g>
+    <svg x="728" y="83" width="31" height="31" viewBox="0 0 64 64">
+      <rect width="64" height="64" rx="15" fill="#A4604F"/>
+      <circle cx="30" cy="38.5" r="8.8" fill="none" stroke="#FBF6F3" stroke-width="4.4"/>
+      <path fill="#FBF6F3" d="M17 19.5Q42.2 14 42.2 31L42.2 42Q42.2 47 46 48Q38.5 50 37.2 44L37.2 31Q37.2 20 17 19.5Z"/>
+    </svg>
     <text x="772" y="97" fill="#3B2A28" font-family="Arial, sans-serif" font-size="14" font-weight="700">Clinic overview</text>
     <text x="772" y="113" fill="#7A6460" font-family="Arial, sans-serif" font-size="10">LIVE DEMO ENVIRONMENT</text>
     <rect x="1032" y="86" width="70" height="23" rx="11.5" fill="#F8EEEA"/>
